@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrabalhoHerois
+namespace TrabalhoHerois.Model.Entities
 {
     public class Heroi : Pessoa
     {

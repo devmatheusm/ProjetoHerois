@@ -1,16 +1,18 @@
-namespace TrabalhoHerois
+namespace TrabalhoHerois.Model.Entities
 {
     public class Pessoa
     {
-        protected int idPessoa;
-        protected string nomePessoa;
-        protected int idade;
-        protected string email;
+        private int idPessoa;
+        private string nomePessoa;
+        private int idade;
+        private string email;
+        private string caminhoImagem;
+        private int anoNasc;
         // CONSTRUTORES
         public Pessoa()
         {
-            idPessoa = idade = 0;
-            nomePessoa = email = "indefinido.";
+            idPessoa = idade = anoNasc = 0;
+            nomePessoa = email = caminhoImagem = "indefinido.";
         }
         // PROPRIEDADES
         public int IdPessoa
@@ -32,6 +34,16 @@ namespace TrabalhoHerois
         {
             get { return email; }
             set { if (value.Trim() != "") email = value; }
+        }
+        public int AnoNasc 
+        {
+            get { return anoNasc; }
+            set { anoNasc = value; }
+        }
+        public string CaminhoImagem
+        {
+            get { return caminhoImagem; }
+            set { caminhoImagem = value; }
         }
         // METODO
         public void calcularIdade(int AnoAtual, int AnoNascimento) // CADE O ANO NASCIMENTO

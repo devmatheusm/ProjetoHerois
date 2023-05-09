@@ -16,7 +16,7 @@ namespace TrabalhoHerois
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenu());
+            Application.Run(new View.FormMenu.FormMenu());
         }
     }
 }

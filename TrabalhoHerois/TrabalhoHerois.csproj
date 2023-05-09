@@ -46,48 +46,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Methods.cs" />
-    <Compile Include="Conexao.cs" />
-    <Compile Include="FormVilao.cs">
+    <Compile Include="Model\DAO\AmigoDAO.cs" />
+    <Compile Include="Model\DAO\VilaoDAO.cs" />
+    <Compile Include="Model\DAO\IDao.cs" />
+    <Compile Include="Model\DAO\HeroiDAO.cs" />
+    <Compile Include="View\Methods.cs" />
+    <Compile Include="Model\DAO\Conexao.cs" />
+    <Compile Include="View\FormVilao\FormVilao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormVilao.Designer.cs">
+    <Compile Include="View\FormVilao\FormVilao.Designer.cs">
       <DependentUpon>FormVilao.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAmigo.cs">
+    <Compile Include="View\FormAmigo\FormAmigo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAmigo.Designer.cs">
+    <Compile Include="View\FormAmigo\FormAmigo.Designer.cs">
       <DependentUpon>FormAmigo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHeroi.cs">
+    <Compile Include="View\FormHeroi\FormHeroi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHeroi.Designer.cs">
+    <Compile Include="View\FormHeroi\FormHeroi.Designer.cs">
       <DependentUpon>FormHeroi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vilao.cs" />
-    <Compile Include="FormMenu.cs">
+    <Compile Include="Model\Entities\Vilao.cs" />
+    <Compile Include="View\FormMenu\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenu.Designer.cs">
+    <Compile Include="View\FormMenu\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Heroi.cs" />
-    <Compile Include="AmigoHeroi.cs" />
-    <Compile Include="Pessoa.cs" />
+    <Compile Include="Model\Entities\Heroi.cs" />
+    <Compile Include="Model\Entities\AmigoHeroi.cs" />
+    <Compile Include="Model\Entities\Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAmigo.resx">
+    <EmbeddedResource Include="View\FormAmigo\FormAmigo.resx">
       <DependentUpon>FormAmigo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMenu.resx">
+    <EmbeddedResource Include="View\FormMenu\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHeroi.resx">
+    <EmbeddedResource Include="View\FormHeroi\FormHeroi.resx">
       <DependentUpon>FormHeroi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormVilao.resx">
+    <EmbeddedResource Include="View\FormVilao\FormVilao.resx">
       <DependentUpon>FormVilao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -139,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\uploadIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

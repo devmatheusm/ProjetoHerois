@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrabalhoHerois
+namespace TrabalhoHerois.Model.Entities
 {
     public class AmigoHeroi : Pessoa
     {
         protected string hobby;
         protected string atividadeProfissional;
         // CONSTRUTORES
-        public AmigoHeroi() : base(){
+        public AmigoHeroi() : base()
+        {
             hobby = atividadeProfissional = "indefinido.";
         }
         // PROPRIEDADES

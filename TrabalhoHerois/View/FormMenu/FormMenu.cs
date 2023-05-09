@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrabalhoHerois.Model.DAO;
 
-namespace TrabalhoHerois
+namespace TrabalhoHerois.View.FormMenu
 {
     public partial class FormMenu : Form
     {
         //Instancia a classe de metodos
-        Methods met = new Methods();
+        Methods met;
 
         public FormMenu()
         {
             InitializeComponent();
+            met = new Methods();
         }
 
         //botao para fechar o programa
@@ -67,6 +70,19 @@ namespace TrabalhoHerois
         {
             met.OpenForm(new FormVilao(), painelMenu);
         }
+
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Conexao.obterConexao();
+            }
+            finally
+            {
+                Conexao.fecharConexao();
+            }
+        }
     }
 }
