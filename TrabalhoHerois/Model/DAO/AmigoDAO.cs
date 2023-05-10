@@ -28,8 +28,7 @@ namespace TrabalhoHerois.Model.DAO
                  "' Where idHeroi =" + amigo.IdPessoa;
             try
             {
-                SqlConnection ConexaoDb = Conexao.obterConexao();
-                SqlCommand command = new SqlCommand(UPDATE, Conexao.obterConexao(););
+                SqlCommand command = new SqlCommand(UPDATE, Conexao.obterConexao());
 
                 if (command.ExecuteNonQuery() == 1)
                 {
@@ -49,12 +48,12 @@ namespace TrabalhoHerois.Model.DAO
 
         public bool consultar(object objeto)
         {
-            SuperHeroi heroi = new SuperHeroi();
-            heroi = (SuperHeroi)objeto;
+            AmigoHeroi amigo = new AmigoHeroi();
+            amigo = (AmigoHeroi)objeto;
 
             bool sucesso = false;
 
-            string SELECT = "SELECT * FROM HEROIS WHERE idHeroi = " + heroi.IdPessoa;
+            string SELECT = "SELECT * FROM HEROIS WHERE idHeroi = " + amigo.IdPessoa;
 
             try
             {
@@ -70,19 +69,14 @@ namespace TrabalhoHerois.Model.DAO
 
                 if (dataReader.Read()) // Lendo Registro
                 {
-                    heroi.IdPessoa = dataReader.GetInt32(0);
-                    heroi.NomePessoa = dataReader.GetString(1);
-                    heroi.AnoNasc = dataReader.GetInt32(2);
-                    heroi.Idade = dataReader.GetInt32(3);
-                    heroi.Email = dataReader.GetString(4);
-                    heroi.caminhoImagem = dataReader.GetString(5);
-                    heroi.NomeHeroi = dataReader.GetString(6);
-                    heroi.PlanetaOrigem = dataReader.GetString(7);
-                    heroi.AtividadeProfissional = dataReader.GetString(8);
-                    heroi.Parceiro = dataReader.GetString(9);
-                    heroi.SuperPoder = dataReader.GetString(10);
-                    heroi.Grupo = dataReader.GetString(11);
-                    heroi.PontoFraco = dataReader.GetString(12);
+                    amigo.IdPessoa = dataReader.GetInt32(0);
+                    amigo.NomePessoa = dataReader.GetString(1);
+                    amigo.AnoNasc = dataReader.GetInt32(2);
+                    amigo.Idade = dataReader.GetInt32(3);
+                    amigo.Email = dataReader.GetString(4);
+                    amigo.CaminhoImagem = dataReader.GetString(5);
+                    amigo.AtividadeProfissional = dataReader.GetString(7);
+                    amigo.Hobby = dataReader.GetString(8);
 
                     command.Dispose();
                     sucesso = true;
@@ -101,7 +95,7 @@ namespace TrabalhoHerois.Model.DAO
 
         public List<object> consultar(string sql)
         {
-            List<object> listaHeroi = null;
+            List<object> listaAmigo = null;
             try
             {
                 SqlConnection conexaoDB = Conexao.obterConexao();
@@ -114,26 +108,21 @@ namespace TrabalhoHerois.Model.DAO
                 // Executa a consulta 
                 dataReader = command.ExecuteReader();
                 if (dataReader.HasRows)
-                    listaHeroi = new List<object>();
+                    listaAmigo = new List<object>();
 
                 while (dataReader.Read()) // Lendo Registros 
                 {
-                    SuperHeroi heroi = new SuperHeroi();
-                    heroi.IdPessoa = dataReader.GetInt32(0);
-                    heroi.NomePessoa = dataReader.GetString(1);
-                    heroi.AnoNasc = dataReader.GetInt32(2);
-                    heroi.Idade = dataReader.GetInt32(3);
-                    heroi.Email = dataReader.GetString(4);
-                    heroi.caminhoImagem = dataReader.GetString(5);
-                    heroi.NomeHeroi = dataReader.GetString(6);
-                    heroi.PlanetaOrigem = dataReader.GetString(7);
-                    heroi.AtividadeProfissional = dataReader.GetString(8);
-                    heroi.Parceiro = dataReader.GetString(9);
-                    heroi.SuperPoder = dataReader.GetString(10);
-                    heroi.Grupo = dataReader.GetString(11);
-                    heroi.PontoFraco = dataReader.GetString(12);
+                    AmigoHeroi amigo = new AmigoHeroi();
+                    amigo.IdPessoa = dataReader.GetInt32(0);
+                    amigo.NomePessoa = dataReader.GetString(1);
+                    amigo.AnoNasc = dataReader.GetInt32(2);
+                    amigo.Idade = dataReader.GetInt32(3);
+                    amigo.Email = dataReader.GetString(4);
+                    amigo.CaminhoImagem = dataReader.GetString(5);
+                    amigo.AtividadeProfissional = dataReader.GetString(7);
+                    amigo.Hobby = dataReader.GetString(8);
 
-                    listaHeroi.Add(heroi);
+                    listaAmigo.Add(amigo);
                 }
             }
             catch (SqlException ex)
@@ -144,15 +133,15 @@ namespace TrabalhoHerois.Model.DAO
             {
                 Conexao.fecharConexao();
             }
-            return listaHeroi;
+            return listaAmigo;
         }
 
         public bool excluir(object objeto)
         {
-            SuperHeroi heroi = new SuperHeroi();
-            heroi = (SuperHeroi)objeto;
+            AmigoHeroi amigo = new AmigoHeroi();
+            amigo = (AmigoHeroi)objeto;
             bool sucesso = false;
-            string DELETE = "DELETE FROM herois WHERE idHeroi = " + heroi.IdPessoa;
+            string DELETE = "DELETE FROM herois WHERE idHeroi = " + amigo.IdPessoa;
             try
             {
                 SqlConnection conexaoDB = Conexao.obterConexao();
@@ -176,26 +165,20 @@ namespace TrabalhoHerois.Model.DAO
 
         public bool inserir(object objeto)
         {
-            SuperHeroi heroi = new SuperHeroi();
-            heroi = (SuperHeroi)objeto;
+            AmigoHeroi amigo = new AmigoHeroi();
+            amigo = (AmigoHeroi)objeto;
 
             bool sucesso = false;
 
             string INSERT = "INSERT INTO HEROIS (nome, anoNasc, idade, " +
-                "email, caminhoImagem, nomeHeroi, planetaOrigem, atividadeProfissional, " +
-                "parceiro, superPoder, grupo, pontoFraco) " +
-                "values (' " + heroi.NomePessoa +
-                "', '" + heroi.AnoNasc +
-                "', '" + heroi.Idade +
-                "', '" + heroi.Email +
-                "', '" + heroi.caminhoImagem +
-                "', '" + heroi.NomeHeroi +
-                "', '" + heroi.PlanetaOrigem +
-                "', '" + heroi.AtividadeProfissional +
-                "', '" + heroi.Parceiro +
-                "', '" + heroi.SuperPoder +
-                "', '" + heroi.Grupo +
-                "', '" + heroi.PontoFraco +
+                "email, caminhoImagem, hobby, atividadeProfissional) " +
+                "values (' " + amigo.NomePessoa +
+                "', '" + amigo.AnoNasc +
+                "', '" + amigo.Idade +
+                "', '" + amigo.Email +
+                "', '" + amigo.CaminhoImagem +
+                "', '" + amigo.Hobby +
+                "', '" + amigo.AtividadeProfissional +
                 "' )";
 
             try

@@ -8,22 +8,24 @@ namespace TrabalhoHerois.Model.Entities
 {
     public class AmigoHeroi : Pessoa
     {
+        protected int idAmigo;
         protected string hobby;
-        protected string atividadeProfissional;
         // CONSTRUTORES
         public AmigoHeroi() : base()
         {
-            hobby = atividadeProfissional = "indefinido.";
+            idAmigo = 0;
+            hobby = "";
         }
         // PROPRIEDADES
-        public string Hobby{
-            get {return hobby;}
-            set {if (value.Trim() != "") hobby = value;}
+        public string Hobby
+        {
+            get { return hobby; }
+            set { hobby = value; }
         }
-        public string AtividadeProfissional{
-            get {return atividadeProfissional;}
-            set {if (value.Trim() != "") atividadeProfissional = value;}
+        public int IdAmigo
+        {
+            get { return idAmigo; }
+            set { idAmigo = value; }
         }
-        // no metodos. F.
     }
 }

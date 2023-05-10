@@ -72,17 +72,5 @@ namespace TrabalhoHerois.View.FormMenu
         }
 
         #endregion
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Conexao.obterConexao();
-            }
-            finally
-            {
-                Conexao.fecharConexao();
-            }
-        }
     }
 }

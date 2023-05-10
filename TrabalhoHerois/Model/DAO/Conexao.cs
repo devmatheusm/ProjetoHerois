@@ -16,7 +16,7 @@ namespace TrabalhoHerois.Model.DAO
         private static SqlConnection conn = null;
 
         //Métodos que permitem obter conexao
-        public static void obterConexao()
+        public static SqlConnection obterConexao()
         {
             //vamos Criar a conexao
             conn = new SqlConnection(connString);
@@ -38,6 +38,7 @@ namespace TrabalhoHerois.Model.DAO
             {
                 Console.WriteLine("Executado Sempre");
             }
+            return conn;
         }
         public static void fecharConexao()
         {
