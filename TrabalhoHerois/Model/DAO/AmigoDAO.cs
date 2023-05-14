@@ -7,12 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrabalhoHerois.Model.DAO
-{
-    class AmigoDAO : IDao
-    {
-        public bool atualizar(object objeto)
-        {
+namespace TrabalhoHerois.Model.DAO {
+    class AmigoDAO : IDao {
+        public bool atualizar(object objeto) {
             AmigoHeroi amigo = new AmigoHeroi();
             amigo = (AmigoHeroi)objeto;
 
@@ -26,28 +23,22 @@ namespace TrabalhoHerois.Model.DAO
                  "', hobby'" + amigo.Hobby +
                  "', atividadeProfissional'" + amigo.AtividadeProfissional +
                  "' Where idHeroi =" + amigo.IdPessoa;
-            try
-            {
+            try {
                 SqlCommand command = new SqlCommand(UPDATE, Conexao.obterConexao());
 
-                if (command.ExecuteNonQuery() == 1)
-                {
+                if (command.ExecuteNonQuery() == 1) {
                     Console.WriteLine("Sucesso na Atualização dos Dados");
                     command.Dispose();
                     sucesso = true;
                 }
-            }
-            catch (SqlException ex)
-            {
+            } catch (SqlException ex) {
                 Console.WriteLine("Erro na Atualização" + ex);
-            }
-            finally { Conexao.fecharConexao(); }
+            } finally { Conexao.fecharConexao(); }
             return sucesso;
 
         }
 
-        public bool consultar(object objeto)
-        {
+        public bool consultar(object objeto) {
             AmigoHeroi amigo = new AmigoHeroi();
             amigo = (AmigoHeroi)objeto;
 
@@ -55,8 +46,7 @@ namespace TrabalhoHerois.Model.DAO
 
             string SELECT = "SELECT * FROM HEROIS WHERE idHeroi = " + amigo.IdPessoa;
 
-            try
-            {
+            try {
                 SqlConnection conexaoDB = Conexao.obterConexao();
                 SqlCommand command = new SqlCommand(SELECT, conexaoDB);
 
@@ -81,23 +71,17 @@ namespace TrabalhoHerois.Model.DAO
                     command.Dispose();
                     sucesso = true;
                 }
-            }
-            catch (SqlException ex)
-            {
+            } catch (SqlException ex) {
                 Console.WriteLine("Erro na Consulta: " + ex);
-            }
-            finally
-            {
+            } finally {
                 Conexao.fecharConexao();
             }
             return sucesso;
         }
 
-        public List<object> consultar(string sql)
-        {
+        public List<object> consultar(string sql) {
             List<object> listaAmigo = null;
-            try
-            {
+            try {
                 SqlConnection conexaoDB = Conexao.obterConexao();
                 SqlCommand command = new SqlCommand(sql, conexaoDB);
 
@@ -124,47 +108,35 @@ namespace TrabalhoHerois.Model.DAO
 
                     listaAmigo.Add(amigo);
                 }
-            }
-            catch (SqlException ex)
-            {
+            } catch (SqlException ex) {
                 Console.WriteLine("Erro na Consulta: " + ex);
-            }
-            finally
-            {
+            } finally {
                 Conexao.fecharConexao();
             }
             return listaAmigo;
         }
 
-        public bool excluir(object objeto)
-        {
+        public bool excluir(object objeto) {
             AmigoHeroi amigo = new AmigoHeroi();
             amigo = (AmigoHeroi)objeto;
             bool sucesso = false;
             string DELETE = "DELETE FROM herois WHERE idHeroi = " + amigo.IdPessoa;
-            try
-            {
+            try {
                 SqlConnection conexaoDB = Conexao.obterConexao();
                 SqlCommand Command = new SqlCommand(DELETE, conexaoDB);
-                if (Command.ExecuteNonQuery() == 1)
-                {
+                if (Command.ExecuteNonQuery() == 1) {
                     Command.Dispose();
                     sucesso = true;
                 }
-            }
-            catch (SqlException ex)
-            {
+            } catch (SqlException ex) {
                 Console.WriteLine("Erro de exclusão" + ex);
-            }
-            finally
-            {
+            } finally {
                 Conexao.fecharConexao();
             }
             return sucesso;
         }
 
-        public bool inserir(object objeto)
-        {
+        public bool inserir(object objeto) {
             AmigoHeroi amigo = new AmigoHeroi();
             amigo = (AmigoHeroi)objeto;
 
@@ -181,25 +153,18 @@ namespace TrabalhoHerois.Model.DAO
                 "', '" + amigo.AtividadeProfissional +
                 "' )";
 
-            try
-            {
+            try {
                 SqlConnection ConexaoDb = Conexao.obterConexao();
                 SqlCommand command = new SqlCommand(INSERT, ConexaoDb);
 
-                if (command.ExecuteNonQuery() == 1)
-                {
+                if (command.ExecuteNonQuery() == 1) {
                     Console.WriteLine("Sucesso na Inscrição");
                     command.Dispose();
                     sucesso = true;
                 }
-            }
-            catch (SqlException ex)
-            {
+            } catch (SqlException ex) {
                 Console.WriteLine("Erro de Inserção " + ex);
-            }
-
-            finally
-            {
+            } finally {
                 Conexao.fecharConexao();
             }
             return sucesso;
