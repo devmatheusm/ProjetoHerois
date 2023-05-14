@@ -1,6 +1,6 @@
 ﻿namespace TrabalhoHerois
 {
-    partial class FormAmigo
+    partial class FormAmigoCad
     {
         /// <summary>
         /// Required designer variable.

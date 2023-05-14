@@ -3,12 +3,12 @@ using System.Windows.Forms;
 
 namespace TrabalhoHerois
 {
-    public partial class FormAmigo : Form
+    public partial class FormAmigoCad : Form
     {
         //Instancia a classe de metodos
         Methods met = new Methods();
 
-        public FormAmigo()
+        public FormAmigoCad()
         {
             InitializeComponent();
         }

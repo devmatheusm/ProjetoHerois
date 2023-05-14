@@ -3,16 +3,15 @@ using System.Windows.Forms;
 
 namespace TrabalhoHerois
 {
-    public partial class FormVilao : Form
+    public partial class FormHeroiCad : Form
     {
         //Instancia a classe de metodos
         Methods met = new Methods();
 
-        public FormVilao()
+        public FormHeroiCad()
         {
             InitializeComponent();
         }
-
         //Ao clicar nesse Botão é pego todas as informações contidas dentro dos textbox
         //e registra no banco de dados
         #region cadastro de informação
@@ -26,6 +25,7 @@ namespace TrabalhoHerois
         #region upload de imagem
         private void btUpload_Click(object sender, EventArgs e)
         {
+            //Chama o metodo que faz o upload da imagem ao picturebox
             met.uploadImage(pbFoto);
         }
         #endregion
@@ -56,17 +56,32 @@ namespace TrabalhoHerois
         //SUPER PODER
         private void tbPoder_Leave(object sender, EventArgs e)
         {
-            met.addText(tbPoder, tbPlaneta.Tag.ToString());
+            met.addText(tbPoder, tbPoder.Tag.ToString());
         }
         //PARCEIRO
         private void tbParceiro_Leave(object sender, EventArgs e)
         {
             met.addText(tbParceiro, tbParceiro.Tag.ToString());
         }
-        //APELIDO DO VILÃO
+        //APELIDO DO HEROI
         private void tbApelido_Leave(object sender, EventArgs e)
         {
             met.addText(tbApelido, tbApelido.Tag.ToString());
+        }
+        //ATIVIDADE PROFISSIONAL
+        private void tbAtiPro_Leave(object sender, EventArgs e)
+        {
+            met.addText(tbAtiPro, this.Tag.ToString());
+        }
+        //GRUPO DO HEROI
+        private void tbGrupo_Leave(object sender, EventArgs e)
+        {
+            met.addText(tbGrupo, tbGrupo.Tag.ToString());
+        }
+        //FRAQUEZA DO HEROI
+        private void tbFraco_Leave(object sender, EventArgs e)
+        {
+            met.addText(tbFraco, tbFraco.Tag.ToString());
         }
         #endregion
 
@@ -78,7 +93,7 @@ namespace TrabalhoHerois
         {
             met.clearText(tbNome);
         }
-        //ULTIMO NOME
+        //ÚLTIMO NOME
         private void tbSobreNome_Enter(object sender, EventArgs e)
         {
             met.clearText(tbSobreNome);
@@ -107,6 +122,21 @@ namespace TrabalhoHerois
         private void tbApelido_Enter(object sender, EventArgs e)
         {
             met.clearText(tbApelido);
+        }
+        //ATIVIDADE PROFISSIONAL
+        private void tbAtiPro_Enter(object sender, EventArgs e)
+        {
+            met.clearText(tbAtiPro);
+        }
+        //NOME DO GRUPO
+        private void tbGrupo_Enter(object sender, EventArgs e)
+        {
+            met.clearText(tbGrupo);
+        }
+        //FRAQUEZA DO HEROI
+        private void tbFraco_Enter(object sender, EventArgs e)
+        {
+            met.clearText(tbFraco);
         }
         #endregion
     }

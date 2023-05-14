@@ -12,12 +12,12 @@ using TrabalhoHerois.Model.DAO;
 
 namespace TrabalhoHerois.View.FormMenu
 {
-    public partial class FormMenu : Form
+    public partial class FormMenuCad : Form
     {
         //Instancia a classe de metodos
         Methods met;
 
-        public FormMenu()
+        public FormMenuCad()
         {
             InitializeComponent();
             met = new Methods();
@@ -53,24 +53,75 @@ namespace TrabalhoHerois.View.FormMenu
         }
         #endregion
 
-        //coleção de botões que fazem a abertura dos formularios de cadastro
+        //coleção de botões que fazem a abertura do context menu para os outros forms
         #region botões de abertura dos cadastros
         //abre o menu de cadastro do heroi
         private void bt_hero_Click(object sender, EventArgs e)
         {
-            met.OpenForm(new FormHeroi(), painelMenu);
+            cmHeroi.Show(bt_hero, bt_hero.Width, 0);
         }
         //abre o menu de cadastro do amigo do heroi
         private void bt_friend_Click(object sender, EventArgs e)
         {
-            met.OpenForm(new FormAmigo(), painelMenu);
+            cmAmigo.Show(bt_friend, bt_friend.Width, 0);
         }
         //abre o menu do vilão
         private void bt_villain_Click(object sender, EventArgs e)
         {
-            met.OpenForm(new FormVilao(), painelMenu);
+            cmVilao.Show(bt_villain, bt_villain.Width, 0);
         }
 
+        #endregion
+
+        //abertura dos forms do context menu
+        #region contextMenu
+        private void cmHeroi_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            switch (e.ClickedItem.Text)
+            {
+                case "Cadastrar":
+                    met.OpenForm(new FormHeroiCad(), painelMenu);
+                    break;
+                case "Atualizar":
+                    break;
+                case "Consultar":
+                    break;
+                case "Excluir":
+                    break;
+            }
+        }
+
+        private void cmAmigo_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            switch (e.ClickedItem.Text)
+            {
+                case "Cadastrar":
+                    met.OpenForm(new FormAmigoCad(), painelMenu);
+                    break;
+                case "Atualizar":
+                    break;
+                case "Consultar":
+                    break;
+                case "Excluir":
+                    break;
+            }
+        }
+
+        private void cmVilao_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            switch (e.ClickedItem.Text)
+            {
+                case "Cadastrar":
+                    met.OpenForm(new FormVilaoCad(), painelMenu);
+                    break;
+                case "Atualizar":
+                    break;
+                case "Consultar":
+                    break;
+                case "Excluir":
+                    break;
+            }
+        }
         #endregion
     }
 }

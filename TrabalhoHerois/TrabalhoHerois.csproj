@@ -52,47 +52,47 @@
     <Compile Include="Model\DAO\HeroiDAO.cs" />
     <Compile Include="View\Methods.cs" />
     <Compile Include="Model\DAO\Conexao.cs" />
-    <Compile Include="View\FormVilao\FormVilao.cs">
+    <Compile Include="View\FormVilao\FormVilaoCad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormVilao\FormVilao.Designer.cs">
-      <DependentUpon>FormVilao.cs</DependentUpon>
+    <Compile Include="View\FormVilao\FormVilaoCad.Designer.cs">
+      <DependentUpon>FormVilaoCad.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormAmigo\FormAmigo.cs">
+    <Compile Include="View\FormAmigo\FormAmigoCad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormAmigo\FormAmigo.Designer.cs">
-      <DependentUpon>FormAmigo.cs</DependentUpon>
+    <Compile Include="View\FormAmigo\FormAmigoCad.Designer.cs">
+      <DependentUpon>FormAmigoCad.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormHeroi\FormHeroi.cs">
+    <Compile Include="View\FormHeroi\FormHeroiCad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormHeroi\FormHeroi.Designer.cs">
-      <DependentUpon>FormHeroi.cs</DependentUpon>
+    <Compile Include="View\FormHeroi\FormHeroiCad.Designer.cs">
+      <DependentUpon>FormHeroiCad.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Entities\Vilao.cs" />
-    <Compile Include="View\FormMenu\FormMenu.cs">
+    <Compile Include="View\FormMenu\FormMenuCad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormMenu\FormMenu.Designer.cs">
-      <DependentUpon>FormMenu.cs</DependentUpon>
+    <Compile Include="View\FormMenu\FormMenuCad.Designer.cs">
+      <DependentUpon>FormMenuCad.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Entities\Heroi.cs" />
     <Compile Include="Model\Entities\AmigoHeroi.cs" />
     <Compile Include="Model\Entities\Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\FormAmigo\FormAmigo.resx">
-      <DependentUpon>FormAmigo.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormAmigo\FormAmigoCad.resx">
+      <DependentUpon>FormAmigoCad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormMenu\FormMenu.resx">
-      <DependentUpon>FormMenu.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormMenu\FormMenuCad.resx">
+      <DependentUpon>FormMenuCad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormHeroi\FormHeroi.resx">
-      <DependentUpon>FormHeroi.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormHeroi\FormHeroiCad.resx">
+      <DependentUpon>FormHeroiCad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormVilao\FormVilao.resx">
-      <DependentUpon>FormVilao.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormVilao\FormVilaoCad.resx">
+      <DependentUpon>FormVilaoCad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -146,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

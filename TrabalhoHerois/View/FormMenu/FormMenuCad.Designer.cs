@@ -1,6 +1,6 @@
 ﻿namespace TrabalhoHerois.View.FormMenu
 {
-    partial class FormMenu
+    partial class FormMenuCad
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,22 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuCad));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_friend = new System.Windows.Forms.Button();
             this.bt_hero = new System.Windows.Forms.Button();
             this.bt_villain = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.painelMenu = new System.Windows.Forms.Panel();
+            this.cmHeroi = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmAmigo = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atualizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmVilao = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmCadVilao = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmAtuVilao = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmConVilao = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmExcVilao = new System.Windows.Forms.ToolStripMenuItem();
             this.bt_min = new System.Windows.Forms.Button();
             this.bt_max = new System.Windows.Forms.Button();
             this.bt_close = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.painelMenu = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.cmHeroi.SuspendLayout();
+            this.cmAmigo.SuspendLayout();
+            this.cmVilao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,16 +77,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 450);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::TrabalhoHerois.Properties.Resources.hero_header;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 50);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // bt_friend
             // 
@@ -143,6 +152,133 @@
             this.panel2.Size = new System.Drawing.Size(635, 50);
             this.panel2.TabIndex = 1;
             // 
+            // painelMenu
+            // 
+            this.painelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.painelMenu.Location = new System.Drawing.Point(165, 50);
+            this.painelMenu.Name = "painelMenu";
+            this.painelMenu.Size = new System.Drawing.Size(635, 400);
+            this.painelMenu.TabIndex = 2;
+            // 
+            // cmHeroi
+            // 
+            this.cmHeroi.BackColor = System.Drawing.Color.Navy;
+            this.cmHeroi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarToolStripMenuItem,
+            this.atualizarToolStripMenuItem,
+            this.consultarcToolStripMenuItem,
+            this.excluirToolStripMenuItem});
+            this.cmHeroi.Name = "cmHeroi";
+            this.cmHeroi.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.cmHeroi.Size = new System.Drawing.Size(126, 92);
+            this.cmHeroi.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmHeroi_ItemClicked);
+            // 
+            // atualizarToolStripMenuItem
+            // 
+            this.atualizarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
+            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.atualizarToolStripMenuItem.Text = "Atualizar";
+            // 
+            // consultarcToolStripMenuItem
+            // 
+            this.consultarcToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.consultarcToolStripMenuItem.Name = "consultarcToolStripMenuItem";
+            this.consultarcToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.consultarcToolStripMenuItem.Text = "Consultar";
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            // 
+            // cmAmigo
+            // 
+            this.cmAmigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmAmigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmAmigo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarToolStripMenuItem,
+            this.atualizarToolStripMenuItem1,
+            this.consultarToolStripMenuItem1,
+            this.excluirToolStripMenuItem1});
+            this.cmAmigo.Name = "cmAmigo";
+            this.cmAmigo.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.cmAmigo.Size = new System.Drawing.Size(126, 92);
+            this.cmAmigo.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmAmigo_ItemClicked);
+            // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.consultarToolStripMenuItem.Image = global::TrabalhoHerois.Properties.Resources.cadIcon;
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.consultarToolStripMenuItem.Text = "Cadastrar";
+            // 
+            // atualizarToolStripMenuItem1
+            // 
+            this.atualizarToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.atualizarToolStripMenuItem1.Name = "atualizarToolStripMenuItem1";
+            this.atualizarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
+            this.atualizarToolStripMenuItem1.Text = "Atualizar";
+            // 
+            // consultarToolStripMenuItem1
+            // 
+            this.consultarToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
+            this.consultarToolStripMenuItem1.Text = "Consultar";
+            // 
+            // excluirToolStripMenuItem1
+            // 
+            this.excluirToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
+            this.excluirToolStripMenuItem1.Text = "Excluir";
+            // 
+            // cmVilao
+            // 
+            this.cmVilao.BackColor = System.Drawing.Color.Indigo;
+            this.cmVilao.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmCadVilao,
+            this.cmAtuVilao,
+            this.cmConVilao,
+            this.cmExcVilao});
+            this.cmVilao.Name = "cmVilao";
+            this.cmVilao.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.cmVilao.Size = new System.Drawing.Size(126, 92);
+            this.cmVilao.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmVilao_ItemClicked);
+            // 
+            // cmCadVilao
+            // 
+            this.cmCadVilao.ForeColor = System.Drawing.Color.White;
+            this.cmCadVilao.Image = global::TrabalhoHerois.Properties.Resources.cadIcon;
+            this.cmCadVilao.Name = "cmCadVilao";
+            this.cmCadVilao.Size = new System.Drawing.Size(125, 22);
+            this.cmCadVilao.Text = "Cadastrar";
+            // 
+            // cmAtuVilao
+            // 
+            this.cmAtuVilao.ForeColor = System.Drawing.Color.White;
+            this.cmAtuVilao.Name = "cmAtuVilao";
+            this.cmAtuVilao.Size = new System.Drawing.Size(125, 22);
+            this.cmAtuVilao.Text = "Atualizar";
+            // 
+            // cmConVilao
+            // 
+            this.cmConVilao.ForeColor = System.Drawing.Color.White;
+            this.cmConVilao.Name = "cmConVilao";
+            this.cmConVilao.Size = new System.Drawing.Size(125, 22);
+            this.cmConVilao.Text = "Consultar";
+            // 
+            // cmExcVilao
+            // 
+            this.cmExcVilao.ForeColor = System.Drawing.Color.White;
+            this.cmExcVilao.Name = "cmExcVilao";
+            this.cmExcVilao.Size = new System.Drawing.Size(125, 22);
+            this.cmExcVilao.Text = "Excluir";
+            // 
             // bt_min
             // 
             this.bt_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -196,15 +332,25 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // painelMenu
+            // pictureBox1
             // 
-            this.painelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.painelMenu.Location = new System.Drawing.Point(165, 50);
-            this.painelMenu.Name = "painelMenu";
-            this.painelMenu.Size = new System.Drawing.Size(635, 400);
-            this.painelMenu.TabIndex = 2;
+            this.pictureBox1.BackgroundImage = global::TrabalhoHerois.Properties.Resources.hero_header;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 50);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
-            // FormMenu
+            // cadastrarToolStripMenuItem
+            // 
+            this.cadastrarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cadastrarToolStripMenuItem.Image = global::TrabalhoHerois.Properties.Resources.cadIcon;
+            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.cadastrarToolStripMenuItem.Text = "Cadastrar";
+            // 
+            // FormMenuCad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,13 +360,16 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormMenu";
+            this.Name = "FormMenuCad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario DC";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.cmHeroi.ResumeLayout(false);
+            this.cmAmigo.ResumeLayout(false);
+            this.cmVilao.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -238,6 +387,21 @@
         private System.Windows.Forms.Button bt_min;
         private System.Windows.Forms.Button bt_max;
         private System.Windows.Forms.Button bt_close;
+        private System.Windows.Forms.ContextMenuStrip cmHeroi;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarcToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip cmAmigo;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem atualizarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip cmVilao;
+        private System.Windows.Forms.ToolStripMenuItem cmCadVilao;
+        private System.Windows.Forms.ToolStripMenuItem cmAtuVilao;
+        private System.Windows.Forms.ToolStripMenuItem cmConVilao;
+        private System.Windows.Forms.ToolStripMenuItem cmExcVilao;
     }
 }
 
