@@ -1,15 +1,14 @@
-﻿using TrabalhoHerois.Model.DAO;
-using TrabalhoHerois.Model.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TrabalhoHerois.Model.Entities;
 
-namespace TrabalhoHerois.Model.DAO {
-    public class HeroiDAO : IDao {
-        public bool atualizar(object objeto) {
+namespace TrabalhoHerois.Model.DAO
+{
+    public class HeroiDAO : IDao
+    {
+        public bool atualizar(object objeto)
+        {
             Heroi heroi = new Heroi();
             heroi = (Heroi)objeto;
 
@@ -27,126 +26,55 @@ namespace TrabalhoHerois.Model.DAO {
                  "', superPoder '" + heroi.SuperPoder +
                  "', grupo '" + heroi.Grupo +
                  "', pontoFraco'" + heroi.PontoFraco +
-                 "' Where idHeroi =" + heroi.IdPessoa;
-            try {
+                 "' Where idHeroi =" + heroi.IdHeroi;
+            try
+            {
                 SqlConnection ConexaoDb = Conexao.obterConexao();
                 SqlCommand command = new SqlCommand(UPDATE, ConexaoDb);
 
-                if (command.ExecuteNonQuery() == 1) {
+                if (command.ExecuteNonQuery() == 1)
+                {
                     Console.WriteLine("Sucesso na Atualização dos Dados");
                     command.Dispose();
                     sucesso = true;
                 }
-            } catch (SqlException ex) {
+            }
+            catch (SqlException ex)
+            {
                 Console.WriteLine("Erro na Atualização" + ex);
-            } finally { Conexao.fecharConexao(); }
+            }
+            finally { Conexao.fecharConexao(); }
             return sucesso;
         }
-        public bool consultar(object objeto) {
-            Heroi heroi = new Heroi();
-            heroi = (Heroi)objeto;
-
-            bool sucesso = false;
-
-            string SELECT = "SELECT * FROM HEROIS WHERE idHeroi = " + heroi.IdPessoa;
-
-            try {
-                SqlConnection conexaoDB = Conexao.obterConexao();
-                SqlCommand command = new SqlCommand(SELECT, conexaoDB);
-
-                //dataReader ira receber o resultado da consulta
-                // somente para leitura 
-                SqlDataReader dataReader;
-
-                //Exuta a consulta
-                dataReader = command.ExecuteReader();
-
-                if (dataReader.Read()) // Lendo Registro
-                {
-                    heroi.IdPessoa = dataReader.GetInt32(0);
-                    heroi.NomePessoa = dataReader.GetString(1);
-                    heroi.AnoNasc = dataReader.GetInt32(2);
-                    heroi.Idade = dataReader.GetInt32(3);
-                    heroi.Email = dataReader.GetString(4);
-                    heroi.CaminhoImagem = dataReader.GetString(5);
-                    heroi.NomeHeroi = dataReader.GetString(6);
-                    heroi.PlanetaOrigem = dataReader.GetString(7);
-                    heroi.AtividadeProfissional = dataReader.GetString(8);
-                    heroi.Parceiro = dataReader.GetString(9);
-                    heroi.SuperPoder = dataReader.GetString(10);
-                    heroi.Grupo = dataReader.GetString(11);
-
-                    command.Dispose();
-                    sucesso = true;
-                }
-            } catch (SqlException ex) {
-                Console.WriteLine("Erro na Consulta: " + ex);
-            } finally {
-                Conexao.fecharConexao();
-            }
-            return sucesso;
-        }
-        public List<object> consultar(string sql) {
-            List<object> listaHeroi = null;
-            try {
-                SqlConnection conexaoDB = Conexao.obterConexao();
-                SqlCommand command = new SqlCommand(sql, conexaoDB);
-
-                // DataReader ira receber o resultada da consulta 
-                //Somente para leitura
-                SqlDataReader dataReader;
-
-                // Executa a consulta 
-                dataReader = command.ExecuteReader();
-                if (dataReader.HasRows)
-                    listaHeroi = new List<object>();
-
-                while (dataReader.Read()) // Lendo Registros 
-                {
-                    Heroi heroi = new Heroi();
-                    heroi.IdPessoa = dataReader.GetInt32(0);
-                    heroi.NomePessoa = dataReader.GetString(1);
-                    heroi.AnoNasc = dataReader.GetInt32(2);
-                    heroi.Idade = dataReader.GetInt32(3);
-                    heroi.Email = dataReader.GetString(4);
-                    heroi.CaminhoImagem = dataReader.GetString(5);
-                    heroi.NomeHeroi = dataReader.GetString(6);
-                    heroi.PlanetaOrigem = dataReader.GetString(7);
-                    heroi.AtividadeProfissional = dataReader.GetString(8);
-                    heroi.Parceiro = dataReader.GetString(9);
-                    heroi.SuperPoder = dataReader.GetString(10);
-                    heroi.Grupo = dataReader.GetString(11);
-                    heroi.PontoFraco = dataReader.GetString(12);
-
-                    listaHeroi.Add(heroi);
-                }
-            } catch (SqlException ex) {
-                Console.WriteLine("Erro na Consulta: " + ex);
-            } finally {
-                Conexao.fecharConexao();
-            }
-            return listaHeroi;
-        }
-        public bool excluir(object objeto) {
+        
+        public bool excluir(object objeto)
+        {
             Heroi heroi = new Heroi();
             heroi = (Heroi)objeto;
             bool sucesso = false;
-            string DELETE = "DELETE FROM herois WHERE idHeroi = " + heroi.IdPessoa;
-            try {
+            string DELETE = "DELETE FROM herois WHERE idHeroi = " + heroi.IdHeroi;
+            try
+            {
                 SqlConnection conexaoDB = Conexao.obterConexao();
                 SqlCommand Command = new SqlCommand(DELETE, conexaoDB);
-                if (Command.ExecuteNonQuery() == 1) {
+                if (Command.ExecuteNonQuery() == 1)
+                {
                     Command.Dispose();
                     sucesso = true;
                 }
-            } catch (SqlException ex) {
+            }
+            catch (SqlException ex)
+            {
                 Console.WriteLine("Erro de exclusão" + ex);
-            } finally {
+            }
+            finally
+            {
                 Conexao.fecharConexao();
             }
             return sucesso;
         }
-        public bool inserir(object objeto) {
+        public bool inserir(object objeto)
+        {
             Heroi heroi = new Heroi();
             heroi = (Heroi)objeto;
 
@@ -168,18 +96,24 @@ namespace TrabalhoHerois.Model.DAO {
                 "', '" + heroi.Grupo +
                 "', '" + heroi.PontoFraco +
                 "' )";
-            try {
+            try
+            {
                 SqlConnection ConexaoDb = Conexao.obterConexao();
                 SqlCommand command = new SqlCommand(INSERT, ConexaoDb);
 
-                if (command.ExecuteNonQuery() == 1) {
+                if (command.ExecuteNonQuery() == 1)
+                {
                     Console.WriteLine("Sucesso na Inscrição");
                     command.Dispose();
                     sucesso = true;
                 }
-            } catch (SqlException ex) {
+            }
+            catch (SqlException ex)
+            {
                 Console.WriteLine("Erro de Inserção " + ex);
-            } finally {
+            }
+            finally
+            {
                 Conexao.fecharConexao();
             }
             return sucesso;

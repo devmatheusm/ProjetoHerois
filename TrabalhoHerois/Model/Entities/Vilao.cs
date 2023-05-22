@@ -1,14 +1,7 @@
-﻿using TrabalhoHerois.Model.DAO;
-using TrabalhoHerois.Model.Entities;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TrabalhoHerois.Model.Entities {//criando as classes
-    internal class Vilao : Pessoa {//criando as variaveis
+﻿namespace TrabalhoHerois.Model.Entities
+{//criando as classes
+    internal class Vilao : Pessoa
+    {//criando as variaveis
         protected int idVilao;
         protected string nomeVilao;
         protected string planetaOrigem;
@@ -16,35 +9,43 @@ namespace TrabalhoHerois.Model.Entities {//criando as classes
         protected string superPoder;
         protected string grupo;
         protected string pontoFraco;
-        public Vilao() : base() {// CONSTRUTOR
+        public Vilao() : base()
+        {// CONSTRUTOR
             idVilao = 0;
             nomeVilao = parceiro = superPoder = planetaOrigem = grupo = pontoFraco = "";
         }
-        public string NomeVilao {
+        public string NomeVilao
+        {
             get { return nomeVilao; }
             set { nomeVilao = value; }
         }
-        public int IdVilao {
+        public int IdVilao
+        {
             get { return idVilao; }
             set { idVilao = value; }
         }
-        public string PlanetaOrigem {
+        public string PlanetaOrigem
+        {
             get { return planetaOrigem; }
             set { planetaOrigem = value; }
         }
-        public string Parceiro {
+        public string Parceiro
+        {
             get { return parceiro; }
             set { parceiro = value; }
         }
-        public string SuperPoder {
+        public string SuperPoder
+        {
             get { return superPoder; }
             set { superPoder = value; }
         }
-        public string Grupo {
+        public string Grupo
+        {
             get { return grupo; }
             set { grupo = value; }
         }
-        public string PontoFraco {
+        public string PontoFraco
+        {
             get { return pontoFraco; }
             set { pontoFraco = value; }
         }

@@ -1,16 +1,20 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+using TrabalhoHerois.Model.DAO;
+using TrabalhoHerois.Model.Entities;
 
-namespace TrabalhoHerois
+namespace TrabalhoHerois.View.FormVilao
 {
     public partial class FormVilaoCad : Form
     {
         //Instancia a classe de metodos
         Methods met = new Methods();
-
+        VilaoDAO dao;
         public FormVilaoCad()
         {
             InitializeComponent();
+            dao = new VilaoDAO();
         }
 
         //Ao clicar nesse Botão é pego todas as informações contidas dentro dos textbox
@@ -18,7 +22,65 @@ namespace TrabalhoHerois
         #region cadastro de informação
         private void bt_enviar_Click(object sender, EventArgs e)
         {
-
+            Vilao vilao = new Vilao();
+            bool concluido = true;
+            try
+            {
+                if (tbNome.Text != tbNome.Tag.ToString())
+                    vilao.NomePessoa = tbNome.Text;
+                else
+                {
+                    tbNome.ForeColor = Color.Red;
+                    concluido = false; MessageBox.Show(".");
+                }
+                if (tbEmail.Text != tbEmail.Tag.ToString())
+                    vilao.Email = tbEmail.Text;
+                else
+                {
+                    tbEmail.ForeColor = Color.Red;
+                    concluido = false; MessageBox.Show("..");
+                }
+                if (tbPlaneta.Text != tbPlaneta.Tag.ToString())
+                    vilao.PlanetaOrigem = tbPlaneta.Text;
+                else
+                {
+                    tbPlaneta.ForeColor = Color.Red;
+                    concluido = false; MessageBox.Show("..");
+                }
+                if (tbPoder.Text != tbPoder.Tag.ToString())
+                    vilao.SuperPoder = tbPoder.Text;
+                else
+                {
+                    tbPoder.ForeColor = Color.Red;
+                    concluido = false; MessageBox.Show("...");
+                }
+                if (tbParceiro.Text != tbParceiro.Tag.ToString())
+                    vilao.Parceiro = tbParceiro.Text;
+                else
+                {
+                    tbParceiro.ForeColor = Color.Red;
+                    concluido = false; MessageBox.Show("....");
+                }
+                if (tbApelido.Text != tbApelido.Tag.ToString())
+                    vilao.NomeVilao = tbApelido.Text;
+                else
+                {
+                    tbApelido.ForeColor = Color.Red;
+                    concluido = false;
+                    MessageBox.Show("......");
+                }
+                vilao.CaminhoImagem = pbFoto.ImageLocation;
+                vilao.AnoNasc = Convert.ToInt32(dtpNasc.Text);
+                vilao.calcularIdade(vilao.AnoNasc);
+                if (concluido && dao.inserir(vilao))
+                    MessageBox.Show("Cadastro concluido.");
+                else
+                    MessageBox.Show("Está faltando alguns itens!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         #endregion
 
@@ -37,11 +99,6 @@ namespace TrabalhoHerois
         private void tbNome_Leave(object sender, EventArgs e)
         {
             met.addText(tbNome, tbNome.Tag.ToString());
-        }
-        //ÚLTIMO NOME
-        private void tbSobreNome_Leave(object sender, EventArgs e)
-        {
-            met.addText(tbSobreNome, tbSobreNome.Tag.ToString());
         }
         //EMAIL
         private void tbEmail_Leave(object sender, EventArgs e)
@@ -77,11 +134,6 @@ namespace TrabalhoHerois
         private void tbNome_Enter(object sender, EventArgs e)
         {
             met.clearText(tbNome);
-        }
-        //ULTIMO NOME
-        private void tbSobreNome_Enter(object sender, EventArgs e)
-        {
-            met.clearText(tbSobreNome);
         }
         //EMAIL
         private void tbEmail_Enter(object sender, EventArgs e)

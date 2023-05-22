@@ -1,14 +1,9 @@
-using TrabalhoHerois.Model.DAO;
-using TrabalhoHerois.Model.Entities;
 using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace TrabalhoHerois.Model.Entities {
-    public class Pessoa {
+namespace TrabalhoHerois.Model.Entities
+{
+    public class Pessoa
+    {
         protected int idPessoa;
         protected string nomePessoa;
         protected int idade;
@@ -17,36 +12,44 @@ namespace TrabalhoHerois.Model.Entities {
         protected int anoNasc;
         protected string atividadeProfissional;
         // CONSTRUTORES
-        public Pessoa() {
+        public Pessoa()
+        {
             idPessoa = idade = anoNasc = 0;
             nomePessoa = email = caminhoImagem = atividadeProfissional = "";
         }
         // PROPRIEDADES
-        public int IdPessoa {
+        public int IdPessoa
+        {
             get { return idPessoa; }
             set { idPessoa = value; }
         }
-        public string NomePessoa {
+        public string NomePessoa
+        {
             get { return nomePessoa; }
             set { nomePessoa = value; }
         }
-        public int Idade {
+        public int Idade
+        {
             get { return idade; }
             set { idade = value; }
         }
-        public string Email {
+        public string Email
+        {
             get { return email; }
             set { email = value; }
         }
-        public int AnoNasc {
+        public int AnoNasc
+        {
             get { return anoNasc; }
             set { anoNasc = value; }
         }
-        public string CaminhoImagem {
+        public string CaminhoImagem
+        {
             get { return caminhoImagem; }
             set { caminhoImagem = value; }
         }
-        public string AtividadeProfissional {
+        public string AtividadeProfissional
+        {
             get { return atividadeProfissional; }
             set { atividadeProfissional = value; }
         }

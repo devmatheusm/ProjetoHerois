@@ -1,23 +1,106 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
+using TrabalhoHerois.Model.DAO;
+using TrabalhoHerois.Model.Entities;
 
-namespace TrabalhoHerois
+namespace TrabalhoHerois.View.FormHeroi
 {
     public partial class FormHeroiCad : Form
     {
         //Instancia a classe de metodos
         Methods met = new Methods();
-
+        HeroiDAO dao;
         public FormHeroiCad()
         {
             InitializeComponent();
+            dao = new HeroiDAO();
         }
         //Ao clicar nesse Botão é pego todas as informações contidas dentro dos textbox
         //e registra no banco de dados
         #region cadastro de informação
         private void bt_enviar_Click(object sender, EventArgs e)
         {
-
+            Heroi heroi = new Heroi();
+            bool concluido;
+            try
+            {
+                concluido = true;
+                if (tbNome.Text != tbNome.Tag.ToString())
+                    heroi.NomePessoa = tbNome.Text;
+                else
+                {
+                    tbNome.ForeColor = Color.Red;
+                    concluido = false;
+                }
+                if (tbEmail.Text != tbEmail.Tag.ToString())
+                    heroi.Email = tbEmail.Text;
+                else
+                {
+                    tbEmail.ForeColor = Color.Red;
+                    concluido = false;
+                }
+                if (tbPlaneta.Text != tbPlaneta.Tag.ToString())
+                    heroi.PlanetaOrigem = tbPlaneta.Text;
+                else
+                {
+                    tbPlaneta.ForeColor = Color.Red;
+                    concluido = false;
+                }
+                if (tbPoder.Text != tbPoder.Tag.ToString())
+                    heroi.SuperPoder = tbPoder.Text;
+                else
+                {
+                    tbPoder.ForeColor = Color.Red;
+                    concluido = false;
+                }
+                if (tbParceiro.Text != tbParceiro.Tag.ToString())
+                    heroi.Parceiro = tbParceiro.Text;
+                else
+                {
+                    tbParceiro.ForeColor = Color.Red;
+                    concluido = false;
+                }
+                if (tbApelido.Text != tbApelido.Tag.ToString())
+                    heroi.NomeHeroi = tbNome.Text;
+                else
+                {
+                    tbApelido.ForeColor = Color.Red;
+                    concluido = false;
+                }
+                if (tbAtiPro.Text != tbAtiPro.Tag.ToString())
+                    heroi.AtividadeProfissional = tbAtiPro.Text;
+                else
+                {
+                    tbAtiPro.ForeColor = Color.Red;
+                    concluido = false;
+                }
+                if (tbGrupo.Text != tbGrupo.Tag.ToString())
+                    heroi.Grupo = tbGrupo.Text;
+                else
+                {
+                    tbGrupo.ForeColor = Color.Red;
+                    concluido = false;
+                }
+                if (tbFraco.Text != tbFraco.Tag.ToString())
+                    heroi.PontoFraco = tbFraco.Text;
+                else
+                {
+                    tbFraco.ForeColor = Color.Red;
+                    concluido = false;
+                }
+                heroi.CaminhoImagem = pbFoto.ImageLocation;
+                heroi.AnoNasc = Convert.ToInt32(dtpNasc.Text);
+                heroi.calcularIdade(heroi.AnoNasc);
+                if (concluido && dao.inserir(heroi))
+                    MessageBox.Show("Cadastro concluido.");
+                else
+                    MessageBox.Show("Está faltando alguns itens!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         #endregion
 
@@ -37,11 +120,6 @@ namespace TrabalhoHerois
         private void tbNome_Leave(object sender, EventArgs e)
         {
             met.addText(tbNome, tbNome.Tag.ToString());
-        }
-        //ÚLTIMO NOME
-        private void tbSobreNome_Leave(object sender, EventArgs e)
-        {
-            met.addText(tbSobreNome, tbSobreNome.Tag.ToString());
         }
         //EMAIL
         private void tbEmail_Leave(object sender, EventArgs e)
@@ -71,7 +149,7 @@ namespace TrabalhoHerois
         //ATIVIDADE PROFISSIONAL
         private void tbAtiPro_Leave(object sender, EventArgs e)
         {
-            met.addText(tbAtiPro, this.Tag.ToString());
+            met.addText(tbAtiPro, tbAtiPro.Tag.ToString());
         }
         //GRUPO DO HEROI
         private void tbGrupo_Leave(object sender, EventArgs e)
@@ -92,11 +170,6 @@ namespace TrabalhoHerois
         private void tbNome_Enter(object sender, EventArgs e)
         {
             met.clearText(tbNome);
-        }
-        //ÚLTIMO NOME
-        private void tbSobreNome_Enter(object sender, EventArgs e)
-        {
-            met.clearText(tbSobreNome);
         }
         //EMAIL
         private void tbEmail_Enter(object sender, EventArgs e)

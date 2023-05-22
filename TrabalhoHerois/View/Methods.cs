@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
+using TrabalhoHerois.Model.DAO;
 
 namespace TrabalhoHerois
 {
@@ -7,6 +11,8 @@ namespace TrabalhoHerois
     {
         //cria uma variavel de armazenamento de um Form
         private Form selectForm;
+
+        //instancia o objeto Conexao
 
         //metodo que remove o placeholder de um textbox(serve apenas para textbox e caso
         //o metodo esteja sendo usado com dado Tag)
@@ -16,9 +22,10 @@ namespace TrabalhoHerois
         public void clearText(TextBox box)
         {
             //verifica se o texto que contem dentro do textbox é igual a Tag
-            if (box.Text == box.Tag.ToString())
+            if (box.Text.Trim() == box.Tag.ToString())
                 //remove o texto do textbox caso passe pelo if
                 box.Text = string.Empty;
+            box.ForeColor = Color.Black;
         }
         #endregion
 
@@ -27,7 +34,7 @@ namespace TrabalhoHerois
         public void addText(TextBox box, string value)
         {
             //verifica se ja tem algum texto dentro do textbox
-            if (box.Text == "".Trim())
+            if (box.Text.Trim() == "".Trim())
                 //atribui um texto da escolha do desenvolvedor caso passe pelo if
                 box.Text = value;
         }

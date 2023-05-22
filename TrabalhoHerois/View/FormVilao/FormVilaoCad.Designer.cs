@@ -1,4 +1,4 @@
-﻿namespace TrabalhoHerois
+﻿namespace TrabalhoHerois.View.FormVilao
 {
     partial class FormVilaoCad
     {
@@ -31,7 +31,6 @@
             this.cadVilao = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbNome = new System.Windows.Forms.TextBox();
-            this.tbSobreNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.dtpNasc = new System.Windows.Forms.DateTimePicker();
@@ -71,9 +70,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(101, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "1. Nome do Vilão";
+            this.label1.Text = "1. Nome do Vilão *";
             // 
             // tbNome
             // 
@@ -82,25 +81,12 @@
             this.tbNome.Margin = new System.Windows.Forms.Padding(0, 15, 0, 25);
             this.tbNome.Name = "tbNome";
             this.tbNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbNome.Size = new System.Drawing.Size(213, 20);
+            this.tbNome.Size = new System.Drawing.Size(429, 20);
             this.tbNome.TabIndex = 1;
-            this.tbNome.Tag = "Primeiro nome";
-            this.tbNome.Text = "Primeiro nome";
+            this.tbNome.Tag = "Nome Completo";
+            this.tbNome.Text = "Nome Completo";
             this.tbNome.Enter += new System.EventHandler(this.tbNome_Enter);
             this.tbNome.Leave += new System.EventHandler(this.tbNome_Leave);
-            // 
-            // tbSobreNome
-            // 
-            this.tbSobreNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbSobreNome.Location = new System.Drawing.Point(320, 103);
-            this.tbSobreNome.Name = "tbSobreNome";
-            this.tbSobreNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbSobreNome.Size = new System.Drawing.Size(213, 20);
-            this.tbSobreNome.TabIndex = 2;
-            this.tbSobreNome.Tag = "Último nome";
-            this.tbSobreNome.Text = "Último nome";
-            this.tbSobreNome.Enter += new System.EventHandler(this.tbSobreNome_Enter);
-            this.tbSobreNome.Leave += new System.EventHandler(this.tbSobreNome_Leave);
             // 
             // label2
             // 
@@ -109,9 +95,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(190, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "3. Email";
+            this.label2.Text = "3. Email *";
             // 
             // tbEmail
             // 
@@ -121,7 +107,7 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbEmail.Size = new System.Drawing.Size(340, 20);
-            this.tbEmail.TabIndex = 4;
+            this.tbEmail.TabIndex = 3;
             this.tbEmail.Tag = "example@dominio.com";
             this.tbEmail.Text = "example@dominio.com";
             this.tbEmail.Enter += new System.EventHandler(this.tbEmail_Enter);
@@ -136,7 +122,7 @@
             this.dtpNasc.Margin = new System.Windows.Forms.Padding(3, 15, 3, 25);
             this.dtpNasc.Name = "dtpNasc";
             this.dtpNasc.Size = new System.Drawing.Size(78, 20);
-            this.dtpNasc.TabIndex = 3;
+            this.dtpNasc.TabIndex = 2;
             // 
             // label3
             // 
@@ -156,9 +142,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label4.Location = new System.Drawing.Point(101, 221);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 13);
+            this.label4.Size = new System.Drawing.Size(113, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "4. Planeta de Origem";
+            this.label4.Text = "4. Planeta de Origem *";
             // 
             // tbPlaneta
             // 
@@ -168,9 +154,9 @@
             this.tbPlaneta.Name = "tbPlaneta";
             this.tbPlaneta.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbPlaneta.Size = new System.Drawing.Size(136, 20);
-            this.tbPlaneta.TabIndex = 5;
-            this.tbPlaneta.Tag = "Terra";
-            this.tbPlaneta.Text = "Terra";
+            this.tbPlaneta.TabIndex = 4;
+            this.tbPlaneta.Tag = "Terra, Jupiter, Marte...";
+            this.tbPlaneta.Text = "Terra, Jupiter, Marte...";
             this.tbPlaneta.Enter += new System.EventHandler(this.tbPlaneta_Enter);
             this.tbPlaneta.Leave += new System.EventHandler(this.tbPlaneta_Leave);
             // 
@@ -182,7 +168,7 @@
             this.tbPoder.Name = "tbPoder";
             this.tbPoder.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbPoder.Size = new System.Drawing.Size(136, 20);
-            this.tbPoder.TabIndex = 6;
+            this.tbPoder.TabIndex = 5;
             this.tbPoder.Tag = "Voar, Super Força...";
             this.tbPoder.Text = "Voar, Super Força...";
             this.tbPoder.Enter += new System.EventHandler(this.tbPoder_Enter);
@@ -195,9 +181,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(247, 221);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.Size = new System.Drawing.Size(85, 13);
             this.label5.TabIndex = 11;
-            this.label5.Text = "5. Super Poder";
+            this.label5.Text = "5. Super Poder *";
             // 
             // tbParceiro
             // 
@@ -207,7 +193,7 @@
             this.tbParceiro.Name = "tbParceiro";
             this.tbParceiro.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbParceiro.Size = new System.Drawing.Size(135, 20);
-            this.tbParceiro.TabIndex = 7;
+            this.tbParceiro.TabIndex = 6;
             this.tbParceiro.Tag = "Nome do parceiro";
             this.tbParceiro.Text = "Nome do parceiro";
             this.tbParceiro.Enter += new System.EventHandler(this.tbParceiro_Enter);
@@ -220,9 +206,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(395, 221);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.Size = new System.Drawing.Size(109, 13);
             this.label6.TabIndex = 13;
-            this.label6.Text = "6. Parceiro";
+            this.label6.Text = "6. Parceiro Amoroso *";
             // 
             // tbApelido
             // 
@@ -232,7 +218,7 @@
             this.tbApelido.Name = "tbApelido";
             this.tbApelido.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbApelido.Size = new System.Drawing.Size(155, 20);
-            this.tbApelido.TabIndex = 8;
+            this.tbApelido.TabIndex = 7;
             this.tbApelido.Tag = "Apelido";
             this.tbApelido.Text = "Apelido";
             this.tbApelido.Enter += new System.EventHandler(this.tbApelido_Enter);
@@ -245,9 +231,9 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(101, 294);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 13);
+            this.label7.Size = new System.Drawing.Size(102, 13);
             this.label7.TabIndex = 15;
-            this.label7.Text = "7. Apelido do Vilão";
+            this.label7.Text = "7. Apelido do Vilão *";
             // 
             // label8
             // 
@@ -271,7 +257,7 @@
             this.btUpload.Location = new System.Drawing.Point(376, 314);
             this.btUpload.Name = "btUpload";
             this.btUpload.Size = new System.Drawing.Size(72, 32);
-            this.btUpload.TabIndex = 9;
+            this.btUpload.TabIndex = 8;
             this.btUpload.Text = "Image";
             this.btUpload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btUpload.UseVisualStyleBackColor = false;
@@ -309,7 +295,7 @@
             this.bt_enviar.UseVisualStyleBackColor = false;
             this.bt_enviar.Click += new System.EventHandler(this.bt_enviar_Click);
             // 
-            // FormVilao
+            // FormVilaoCad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -331,12 +317,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbSobreNome);
             this.Controls.Add(this.tbNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cadVilao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormVilao";
+            this.Name = "FormVilaoCad";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "FormVilao";
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
@@ -350,7 +335,6 @@
         private System.Windows.Forms.Label cadVilao;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbNome;
-        private System.Windows.Forms.TextBox tbSobreNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.DateTimePicker dtpNasc;

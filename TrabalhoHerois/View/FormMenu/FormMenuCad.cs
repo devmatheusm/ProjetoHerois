@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using TrabalhoHerois.Model.DAO;
+using TrabalhoHerois.View.FormAmigo;
+using TrabalhoHerois.View.FormHeroi;
+using TrabalhoHerois.View.FormVilao;
 
 namespace TrabalhoHerois.View.FormMenu
 {
@@ -83,10 +77,13 @@ namespace TrabalhoHerois.View.FormMenu
                     met.OpenForm(new FormHeroiCad(), painelMenu);
                     break;
                 case "Atualizar":
+                    met.OpenForm(new FormHeroiAtu(), painelMenu);
                     break;
                 case "Consultar":
+                    met.OpenForm(new FormHeroiCon(), painelMenu);
                     break;
                 case "Excluir":
+                    met.OpenForm(new FormHeroiExc(), painelMenu);
                     break;
             }
         }
@@ -99,10 +96,13 @@ namespace TrabalhoHerois.View.FormMenu
                     met.OpenForm(new FormAmigoCad(), painelMenu);
                     break;
                 case "Atualizar":
+                    met.OpenForm(new FormAmigoAtu(), painelMenu);
                     break;
                 case "Consultar":
+                    met.OpenForm(new FormAmigoCon(), painelMenu);
                     break;
                 case "Excluir":
+                    met.OpenForm(new FormAmigoExc(), painelMenu);
                     break;
             }
         }
@@ -115,10 +115,13 @@ namespace TrabalhoHerois.View.FormMenu
                     met.OpenForm(new FormVilaoCad(), painelMenu);
                     break;
                 case "Atualizar":
+                    met.OpenForm(new FormVilaoAtu(), painelMenu);
                     break;
                 case "Consultar":
+                    met.OpenForm(new FormVilaoCon(), painelMenu);
                     break;
                 case "Excluir":
+                    met.OpenForm(new FormVilaoExc(), painelMenu);
                     break;
             }
         }

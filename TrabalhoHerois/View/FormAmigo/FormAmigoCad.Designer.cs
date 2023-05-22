@@ -1,4 +1,4 @@
-﻿namespace TrabalhoHerois
+﻿namespace TrabalhoHerois.View.FormAmigo
 {
     partial class FormAmigoCad
     {
@@ -39,7 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbSobreNome = new System.Windows.Forms.TextBox();
             this.tbNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cadVilao = new System.Windows.Forms.Label();
@@ -55,7 +54,7 @@
             this.tbHobby.Name = "tbHobby";
             this.tbHobby.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbHobby.Size = new System.Drawing.Size(135, 20);
-            this.tbHobby.TabIndex = 69;
+            this.tbHobby.TabIndex = 5;
             this.tbHobby.Tag = "Pescar, Malhar,  Correr...";
             this.tbHobby.Text = "Pescar, Malhar,  Correr...";
             this.tbHobby.Enter += new System.EventHandler(this.tbHobby_Enter);
@@ -68,9 +67,9 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label10.Location = new System.Drawing.Point(161, 221);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 13);
+            this.label10.Size = new System.Drawing.Size(57, 13);
             this.label10.TabIndex = 68;
-            this.label10.Text = "5. Hobby";
+            this.label10.Text = "5. Hobby *";
             // 
             // tbAtiPro
             // 
@@ -80,8 +79,8 @@
             this.tbAtiPro.Name = "tbAtiPro";
             this.tbAtiPro.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbAtiPro.Size = new System.Drawing.Size(182, 20);
-            this.tbAtiPro.TabIndex = 67;
-            this.tbAtiPro.Tag = "Jornalista, Delegado,  Cientista ...";
+            this.tbAtiPro.TabIndex = 4;
+            this.tbAtiPro.Tag = "Jornalista, Delegado,  Cientista...";
             this.tbAtiPro.Text = "Jornalista, Delegado,  Cientista...";
             this.tbAtiPro.Enter += new System.EventHandler(this.tbAtiPro_Enter);
             this.tbAtiPro.Leave += new System.EventHandler(this.tbAtiPro_Leave);
@@ -93,9 +92,9 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label9.Location = new System.Drawing.Point(324, 148);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 13);
+            this.label9.Size = new System.Drawing.Size(125, 13);
             this.label9.TabIndex = 66;
-            this.label9.Text = "4. Atividade profissional";
+            this.label9.Text = "4. Atividade profissional *";
             // 
             // pbFoto
             // 
@@ -145,7 +144,7 @@
             this.dtpNasc.Margin = new System.Windows.Forms.Padding(3, 15, 3, 25);
             this.dtpNasc.Name = "dtpNasc";
             this.dtpNasc.Size = new System.Drawing.Size(78, 20);
-            this.dtpNasc.TabIndex = 54;
+            this.dtpNasc.TabIndex = 2;
             // 
             // label3
             // 
@@ -166,7 +165,7 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbEmail.Size = new System.Drawing.Size(124, 20);
-            this.tbEmail.TabIndex = 52;
+            this.tbEmail.TabIndex = 3;
             this.tbEmail.Tag = "example@dominio.com";
             this.tbEmail.Text = "example@dominio.com";
             this.tbEmail.Enter += new System.EventHandler(this.tbEmail_Enter);
@@ -179,22 +178,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(190, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 51;
-            this.label2.Text = "3. Email";
-            // 
-            // tbSobreNome
-            // 
-            this.tbSobreNome.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbSobreNome.Location = new System.Drawing.Point(320, 103);
-            this.tbSobreNome.Name = "tbSobreNome";
-            this.tbSobreNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbSobreNome.Size = new System.Drawing.Size(213, 20);
-            this.tbSobreNome.TabIndex = 49;
-            this.tbSobreNome.Tag = "Último nome";
-            this.tbSobreNome.Text = "Último nome";
-            this.tbSobreNome.Enter += new System.EventHandler(this.tbSobreNome_Enter);
-            this.tbSobreNome.Leave += new System.EventHandler(this.tbSobreNome_Leave);
+            this.label2.Text = "3. Email *";
             // 
             // tbNome
             // 
@@ -203,10 +189,10 @@
             this.tbNome.Margin = new System.Windows.Forms.Padding(0, 15, 0, 25);
             this.tbNome.Name = "tbNome";
             this.tbNome.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbNome.Size = new System.Drawing.Size(213, 20);
-            this.tbNome.TabIndex = 48;
-            this.tbNome.Tag = "Primeiro nome";
-            this.tbNome.Text = "Primeiro nome";
+            this.tbNome.Size = new System.Drawing.Size(405, 20);
+            this.tbNome.TabIndex = 1;
+            this.tbNome.Tag = "Nome Completo";
+            this.tbNome.Text = "Nome Completo";
             this.tbNome.Enter += new System.EventHandler(this.tbNome_Enter);
             this.tbNome.Leave += new System.EventHandler(this.tbNome_Leave);
             // 
@@ -217,9 +203,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(101, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 13);
+            this.label1.Size = new System.Drawing.Size(144, 13);
             this.label1.TabIndex = 47;
-            this.label1.Text = "1. Nome do Amigo do Heroi";
+            this.label1.Text = "1. Nome do Amigo do Heroi *";
             // 
             // cadVilao
             // 
@@ -255,7 +241,7 @@
             this.bt_enviar.UseVisualStyleBackColor = false;
             this.bt_enviar.Click += new System.EventHandler(this.bt_enviar_Click);
             // 
-            // FormAmigo
+            // FormAmigoCad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -273,12 +259,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbSobreNome);
             this.Controls.Add(this.tbNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cadVilao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormAmigo";
+            this.Name = "FormAmigoCad";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
@@ -298,7 +283,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbSobreNome;
         private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label cadVilao;

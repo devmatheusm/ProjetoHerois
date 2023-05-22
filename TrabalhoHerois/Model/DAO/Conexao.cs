@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TrabalhoHerois.Model.DAO
 {
     class Conexao
     {
-        private static string connString = "Data Source = localhost\\SQLEXPRESS3; Initial Catalog = DB_Herois_viloes3; Integrated Security=true;";
+        private static string connString = "Data Source = localhost\\SQLEXPRESS; Initial Catalog = DB_Herois_viloes3; Integrated Security = true;";
 
         //Representa a conexao do Banco
         private static SqlConnection conn = null;
@@ -45,6 +41,7 @@ namespace TrabalhoHerois.Model.DAO
             if (conn != null)
             {
                 conn.Close();
+                Console.WriteLine("Conexao Fechada");
             }
         }
     }
