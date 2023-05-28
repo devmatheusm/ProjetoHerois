@@ -131,9 +131,9 @@
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label8.Location = new System.Drawing.Point(321, 216);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 13);
+            this.label8.Size = new System.Drawing.Size(87, 13);
             this.label8.TabIndex = 63;
-            this.label8.Text = "8. Foto do Vilão";
+            this.label8.Text = "8. Foto do Amigo";
             // 
             // dtpNasc
             // 
@@ -143,6 +143,7 @@
             this.dtpNasc.Location = new System.Drawing.Point(104, 176);
             this.dtpNasc.Margin = new System.Windows.Forms.Padding(3, 15, 3, 25);
             this.dtpNasc.Name = "dtpNasc";
+            this.dtpNasc.ShowUpDown = true;
             this.dtpNasc.Size = new System.Drawing.Size(78, 20);
             this.dtpNasc.TabIndex = 2;
             // 

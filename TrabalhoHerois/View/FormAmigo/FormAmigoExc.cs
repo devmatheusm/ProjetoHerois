@@ -21,23 +21,19 @@ namespace TrabalhoHerois.View.FormAmigo
             met.atualizaLista(clbAmigo, "amigosHeroi", "idamigo");
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                foreach (string i in clbAmigo.CheckedItems)
-                {
-                    Match match = Regex.Match(i, @"(?<=\-)\-?\d+");
-                    amigo.IdAmigo = Convert.ToInt32(match.Value);
+        private void button1_Click(object sender, EventArgs e) {
+            if (MessageBox.Show("Deseja excluir o(s) cadastro(s) selecionado(s)?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) 
+                try {
+                    foreach (string i in clbAmigo.CheckedItems) {
+                        Match match = Regex.Match(i, @"(?<=\-)\-?\d+");
+                        amigo.IdAmigo = Convert.ToInt32(match.Value);
 
-                    DAO.excluir(amigo);
+                        DAO.excluir(amigo);
+                    }
+                    met.atualizaLista(clbAmigo, "amigosHeroi", "idamigo");
+                } catch (Exception ex) {
+                    MessageBox.Show("Erro ao excluir o ID " + amigo.IdAmigo + "\nERROR:" + ex.Message);
                 }
-                met.atualizaLista(clbAmigo, "amigosHeroi", "idamigo");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao excluir o ID " + amigo.IdAmigo + "\nERROR:" + ex.Message);
-            }
         }
     }
 }

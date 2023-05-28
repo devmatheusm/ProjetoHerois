@@ -23,20 +23,21 @@ namespace TrabalhoHerois.View.FormHeroi
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            try
-            {
-                foreach (string i in clbHeroi.CheckedItems)
+            if (MessageBox.Show("Deseja excluir o(s) cadastro(s) selecionado(s)?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                try
                 {
-                    Match match = Regex.Match(i, @"(?<=\-)\-?\d+");
-                    heroi.IdHeroi = Convert.ToInt32(match.Value);
-                    DAO.excluir(heroi);
+                    foreach (string i in clbHeroi.CheckedItems)
+                    {
+                        Match match = Regex.Match(i, @"(?<=\-)\-?\d+");
+                        heroi.IdHeroi = Convert.ToInt32(match.Value);
+                        DAO.excluir(heroi);
+                    }
+                    met.atualizaLista(clbHeroi, "amigosHeroi", "idamigo");
                 }
-                met.atualizaLista(clbHeroi, "amigosHeroi", "idamigo");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao excluir o ID " + heroi.IdHeroi + "\nERROR:" + ex.Message);
-            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao excluir o ID " + heroi.IdHeroi + "\nERROR:" + ex.Message);
+                }
         }
     }
 }
