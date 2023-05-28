@@ -64,6 +64,7 @@
             this.btConsGeralHeroi.Text = "CONSULTA GERAL";
             this.btConsGeralHeroi.UseVisualStyleBackColor = true;
             this.btConsGeralHeroi.Click += new System.EventHandler(this.btConsGeralAmigo_Click);
+            this.btConsGeralHeroi.Click += new System.EventHandler(this.btPerAmigoID_Click);
             // 
             // panel1
             // 
