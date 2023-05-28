@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cadVilao = new System.Windows.Forms.Label();
             this.bt_enviar = new System.Windows.Forms.Button();
+            this.eg1f2c = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -242,12 +243,26 @@
             this.bt_enviar.UseVisualStyleBackColor = false;
             this.bt_enviar.Click += new System.EventHandler(this.bt_enviar_Click);
             // 
+            // eg1f2c
+            // 
+            this.eg1f2c.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.eg1f2c.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.eg1f2c.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.eg1f2c.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eg1f2c.Location = new System.Drawing.Point(0, 376);
+            this.eg1f2c.Name = "eg1f2c";
+            this.eg1f2c.Size = new System.Drawing.Size(28, 23);
+            this.eg1f2c.TabIndex = 71;
+            this.eg1f2c.UseVisualStyleBackColor = true;
+            this.eg1f2c.Click += new System.EventHandler(this.eg1f2c_Click);
+            // 
             // FormAmigoCad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(635, 400);
+            this.Controls.Add(this.eg1f2c);
             this.Controls.Add(this.bt_enviar);
             this.Controls.Add(this.tbHobby);
             this.Controls.Add(this.label10);
@@ -288,5 +303,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label cadVilao;
         private System.Windows.Forms.Button bt_enviar;
+        private System.Windows.Forms.Button eg1f2c;
     }
 }

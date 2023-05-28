@@ -24,8 +24,7 @@ namespace TrabalhoHerois.View.FormHeroi
         {
             met.consultaGeral(dgvHeroi, "herois");
         }
-
-        private void btPerAmigoID_Click(object sender, EventArgs e) 
+        private void btPerIDHeroi_Click(object sender, EventArgs e) 
         {
             Match match = Regex.Match(cbConIdHeroi.Text, @"(?<=\-)\-?\d+");
             heroi.IdHeroi = Convert.ToInt32(match.Value);

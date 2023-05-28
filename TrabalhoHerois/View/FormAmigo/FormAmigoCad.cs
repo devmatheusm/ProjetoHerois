@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using TrabalhoHerois.Model.DAO;
 using TrabalhoHerois.Model.Entities;
+using System.Web;
 
 namespace TrabalhoHerois.View.FormAmigo
 {
@@ -127,5 +128,9 @@ namespace TrabalhoHerois.View.FormAmigo
             met.clearText(tbHobby);
         }
         #endregion
+
+        private void eg1f2c_Click(object sender, EventArgs e) {
+            MessageBox.Show("Parabéns por encontrar o secreto!", "PARABENS!!!");
+        }
     }
 }

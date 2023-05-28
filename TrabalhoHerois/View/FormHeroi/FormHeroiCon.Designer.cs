@@ -97,6 +97,7 @@
             this.btPerIDHeroi.TabIndex = 51;
             this.btPerIDHeroi.Text = "CONSULTA POR ID";
             this.btPerIDHeroi.UseVisualStyleBackColor = true;
+            this.btPerIDHeroi.Click += new System.EventHandler(this.btPerIDHeroi_Click);
             // 
             // label1
             // 
