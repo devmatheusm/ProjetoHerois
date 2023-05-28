@@ -25,8 +25,8 @@ namespace TrabalhoHerois.View.FormVilao
         private void cbAtuVilao_SelectedIndexChanged(object sender, EventArgs e)
         {
             Match match = Regex.Match(cbAtuVilao.Text, @"(?<=\-)\-?\d+");
-            vilao.IdVilao = Convert.ToInt32(match.Value);
-            met.consultaId(dgvAtuVilao, "viloes", "idVilao", vilao.IdVilao, "nome, anoNasc, email, nomeVilao, planetaOrigem, parceiro, superPoder");
+            vilao.IdPessoa = Convert.ToInt32(match.Value);
+            met.consultaId(dgvAtuVilao, "viloes", "idVilao", vilao.IdPessoa, "nome, anoNasc, email, nomeVilao, planetaOrigem, parceiro, superPoder");
         }
 
         private void btAtuVilao_Click(object sender, EventArgs e)

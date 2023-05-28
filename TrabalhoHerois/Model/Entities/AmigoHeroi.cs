@@ -2,12 +2,10 @@
 {
     public class AmigoHeroi : Pessoa
     {
-        protected int idAmigo;
         protected string hobby;
         // CONSTRUTORES
         public AmigoHeroi() : base()
         {
-            idAmigo = 0;
             hobby = "";
         }
         // PROPRIEDADES
@@ -15,11 +13,6 @@
         {
             get { return hobby; }
             set { hobby = value; }
-        }
-        public int IdAmigo
-        {
-            get { return idAmigo; }
-            set { idAmigo = value; }
         }
     }
 }

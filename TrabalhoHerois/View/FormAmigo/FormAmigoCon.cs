@@ -30,8 +30,8 @@ namespace TrabalhoHerois.View.FormAmigo
         {
 
             Match match = Regex.Match(cbConIdAmigo.Text, @"(?<=\-)\-?\d+");
-            amigo.IdAmigo = Convert.ToInt32(match.Value);
-            met.consultaId(dgvAmigo, "amigosHeroi", "idAmigo", amigo.IdAmigo);
+            amigo.IdPessoa = Convert.ToInt32(match.Value);
+            met.consultaId(dgvAmigo, "amigosHeroi", "idAmigo", amigo.IdPessoa);
         }
     }
 }

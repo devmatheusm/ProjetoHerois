@@ -22,7 +22,7 @@ namespace TrabalhoHerois.Model.DAO
                  "', caminhoImagem'" + amigo.CaminhoImagem +
                  "', hobby'" + amigo.Hobby +
                  "', atividadeProfissional'" + amigo.AtividadeProfissional +
-                 "' Where idAmigo =" + amigo.IdAmigo;
+                 "' Where idAmigo =" + amigo.IdPessoa;
             try
             {
                 SqlCommand command = new SqlCommand(UPDATE, Conexao.obterConexao());
@@ -48,7 +48,7 @@ namespace TrabalhoHerois.Model.DAO
             AmigoHeroi amigo = new AmigoHeroi();
             amigo = (AmigoHeroi)objeto;
             bool sucesso = false;
-            string DELETE = "DELETE FROM amigosheroi WHERE idAmigo = " + amigo.IdAmigo;
+            string DELETE = "DELETE FROM amigosheroi WHERE idAmigo = " + amigo.IdPessoa;
             try
             {
                 SqlConnection conexaoDB = Conexao.obterConexao();

@@ -25,15 +25,15 @@ namespace TrabalhoHerois.View.FormHeroi
         private void cbAtuHeroi_SelectedIndexChanged(object sender, EventArgs e)
         {
             Match match = Regex.Match(cbAtuHeroi.Text, @"(?<=\-)\-?\d+");
-            heroi.IdHeroi = Convert.ToInt32(match.Value);
-            met.consultaId(dgvAtuHeroi, "herois", "idHeroi", heroi.IdHeroi, "nome, anoNasc, email, nomeHeroi, planetaOrigem, atividadeProfissional, parceiro, superPoder, grupo, pontoFraco");
+            heroi.IdPessoa = Convert.ToInt32(match.Value);
+            met.consultaId(dgvAtuHeroi, "herois", "idHeroi", heroi.IdPessoa, "nome, anoNasc, email, nomeHeroi, planetaOrigem, atividadeProfissional, parceiro, superPoder, grupo, pontoFraco");
         }
 
         private void btAtuHeroi_Click(object sender, EventArgs e)
         {
             met.atualizaCad();
             met.atualizaLista(cbAtuHeroi, "herois", "idHeroi");
-            met.atualizaIdadeBD("herois", "idHeroi", heroi.IdHeroi);
+            met.atualizaIdadeBD("herois", "idHeroi", heroi.IdPessoa);
         }
     }
 }

@@ -28,8 +28,8 @@ namespace TrabalhoHerois.View.FormVilao
          private void btPerIDVilao_Click(object sender, EventArgs e)
         {
             Match match = Regex.Match(cbConIdVilao.Text, @"(?<=\-)\-?\d+");
-            vilao.IdVilao = Convert.ToInt32(match.Value);
-            met.consultaId(dgvVilaoCon, "viloes", "idVilao", vilao.IdVilao);
+            vilao.IdPessoa = Convert.ToInt32(match.Value);
+            met.consultaId(dgvVilaoCon, "viloes", "idVilao", vilao.IdPessoa);
         }
     }
 }

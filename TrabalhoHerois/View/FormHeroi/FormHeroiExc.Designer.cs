@@ -69,7 +69,7 @@
             this.btExcAmigo.Tag = "EXCLUIR";
             this.btExcAmigo.Text = "EXCLUIR";
             this.btExcAmigo.UseVisualStyleBackColor = false;
-            this.btExcAmigo.Click += new System.EventHandler(this.button1_Click);
+            this.btExcAmigo.Click += new System.EventHandler(this.btExcAmigo_Click);
             // 
             // FormHeroiExc
             // 

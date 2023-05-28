@@ -17,31 +17,31 @@ namespace TrabalhoHerois.View.FormMenu
             met = new Methods();
         }
 
-        //botao para fechar o programa
-        #region fecha o programa
-        private void CloseForm(object sender, EventArgs e)
+        //eventos que fazem o controle dos botões de fechar, maximizar e minimizar
+        #region botões de controle
+        //fecha o programa
+        private void bt_close_MouseUp(object sender, MouseEventArgs e)
         {
             this.Close();
         }
-        #endregion
 
         //botao para maximizar todo o programa
-        #region maximiza o programa
-        private void maxForm(object sender, EventArgs e)
+        private void bt_max_MouseUp(object sender, MouseEventArgs e)
         {
             //verifica se esta maximizado
             if (this.WindowState == FormWindowState.Maximized)
                 //se o programa ja estiver em maximizado ele volta ao estado normal
                 this.WindowState = FormWindowState.Normal;
             else
+            {
                 //se não ele maximiza
+                this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
                 this.WindowState = FormWindowState.Maximized;
+            }
         }
-        #endregion
 
         //botao para minimizar todo o programa
-        #region minimiza o programa
-        private void minForm(object sender, EventArgs e)
+        private void bt_min_MouseUp(object sender, MouseEventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }

@@ -26,7 +26,7 @@ namespace TrabalhoHerois.Model.DAO
                  "', superPoder '" + vilao.SuperPoder +
                  "', grupo '" + vilao.Grupo +
                  "', pontoFraco'" + vilao.PontoFraco +
-                 "' Where idVilao =" + vilao.IdVilao;
+                 "' Where idVilao =" + vilao.IdPessoa;
             try
             {
                 SqlConnection ConexaoDb = Conexao.obterConexao();
@@ -52,7 +52,7 @@ namespace TrabalhoHerois.Model.DAO
             Vilao vilao = new Vilao();
             vilao = (Vilao)objeto;
             bool sucesso = false;
-            string DELETE = "DELETE FROM viloes WHERE idVilao = " + vilao.IdVilao;
+            string DELETE = "DELETE FROM viloes WHERE idVilao = " + vilao.IdPessoa;
             try
             {
                 SqlConnection conexaoDB = Conexao.obterConexao();

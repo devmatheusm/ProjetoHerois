@@ -53,7 +53,6 @@
             // 
             // btPerIDAmigo
             // 
-            this.btPerIDAmigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btPerIDAmigo.Location = new System.Drawing.Point(166, 0);
             this.btPerIDAmigo.Name = "btPerIDAmigo";
             this.btPerIDAmigo.Size = new System.Drawing.Size(80, 41);
@@ -64,8 +63,7 @@
             // 
             // btConsGeralAmigo
             // 
-            this.btConsGeralAmigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btConsGeralAmigo.Location = new System.Drawing.Point(366, 0);
+            this.btConsGeralAmigo.Location = new System.Drawing.Point(252, 0);
             this.btConsGeralAmigo.Name = "btConsGeralAmigo";
             this.btConsGeralAmigo.Size = new System.Drawing.Size(97, 41);
             this.btConsGeralAmigo.TabIndex = 52;

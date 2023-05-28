@@ -40,7 +40,6 @@
             // 
             // btPerIDVilao
             // 
-            this.btPerIDVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btPerIDVilao.Location = new System.Drawing.Point(166, 0);
             this.btPerIDVilao.Name = "btPerIDVilao";
             this.btPerIDVilao.Size = new System.Drawing.Size(80, 41);
@@ -74,8 +73,7 @@
             // 
             // btConsGeralVilao
             // 
-            this.btConsGeralVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btConsGeralVilao.Location = new System.Drawing.Point(366, 0);
+            this.btConsGeralVilao.Location = new System.Drawing.Point(252, 0);
             this.btConsGeralVilao.Name = "btConsGeralVilao";
             this.btConsGeralVilao.Size = new System.Drawing.Size(97, 41);
             this.btConsGeralVilao.TabIndex = 52;

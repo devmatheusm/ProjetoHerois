@@ -2,7 +2,6 @@
 {
     public class Heroi : Pessoa
     {
-        protected int idHeroi;
         protected string nomeHeroi;
         protected string grupo;
         protected string parceiro;
@@ -13,15 +12,9 @@
         // CONSTRUTOR
         public Heroi() : base()
         {
-            idHeroi = 0;
             nomeHeroi = grupo = parceiro = planetaOrigem = superPoder = pontoFraco = "";
         }
         // PROPRIEDADES
-        public int IdHeroi
-        {
-            get { return idHeroi; }
-            set { idHeroi = value; }
-        }
         public string NomeHeroi
         {
             get { return nomeHeroi; }

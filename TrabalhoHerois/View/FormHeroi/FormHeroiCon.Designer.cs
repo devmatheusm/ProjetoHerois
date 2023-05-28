@@ -56,15 +56,13 @@
             // 
             // btConsGeralHeroi
             // 
-            this.btConsGeralHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btConsGeralHeroi.Location = new System.Drawing.Point(366, 0);
+            this.btConsGeralHeroi.Location = new System.Drawing.Point(252, 0);
             this.btConsGeralHeroi.Name = "btConsGeralHeroi";
             this.btConsGeralHeroi.Size = new System.Drawing.Size(97, 41);
             this.btConsGeralHeroi.TabIndex = 52;
             this.btConsGeralHeroi.Text = "CONSULTA GERAL";
             this.btConsGeralHeroi.UseVisualStyleBackColor = true;
             this.btConsGeralHeroi.Click += new System.EventHandler(this.btConsGeralAmigo_Click);
-            this.btConsGeralHeroi.Click += new System.EventHandler(this.btPerAmigoID_Click);
             // 
             // panel1
             // 
@@ -91,13 +89,13 @@
             // 
             // btPerIDHeroi
             // 
-            this.btPerIDHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btPerIDHeroi.Location = new System.Drawing.Point(166, 0);
             this.btPerIDHeroi.Name = "btPerIDHeroi";
             this.btPerIDHeroi.Size = new System.Drawing.Size(80, 41);
             this.btPerIDHeroi.TabIndex = 51;
             this.btPerIDHeroi.Text = "CONSULTA POR ID";
             this.btPerIDHeroi.UseVisualStyleBackColor = true;
+            this.btPerIDHeroi.Click += new System.EventHandler(this.btPerAmigoID_Click);
             // 
             // label1
             // 

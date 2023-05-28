@@ -267,6 +267,7 @@
             // 
             this.pbFoto.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoto.Location = new System.Drawing.Point(460, 282);
             this.pbFoto.Name = "pbFoto";
             this.pbFoto.Size = new System.Drawing.Size(73, 73);

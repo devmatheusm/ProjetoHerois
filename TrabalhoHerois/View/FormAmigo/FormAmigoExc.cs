@@ -28,7 +28,7 @@ namespace TrabalhoHerois.View.FormAmigo
                 foreach (string i in clbAmigo.CheckedItems)
                 {
                     Match match = Regex.Match(i, @"(?<=\-)\-?\d+");
-                    amigo.IdAmigo = Convert.ToInt32(match.Value);
+                    amigo.IdPessoa = Convert.ToInt32(match.Value);
 
                     DAO.excluir(amigo);
                 }
@@ -36,7 +36,7 @@ namespace TrabalhoHerois.View.FormAmigo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao excluir o ID " + amigo.IdAmigo + "\nERROR:" + ex.Message);
+                MessageBox.Show("Erro ao excluir o ID " + amigo.IdPessoa + "\nERROR:" + ex.Message);
             }
         }
     }
