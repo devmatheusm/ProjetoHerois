@@ -30,14 +30,14 @@ namespace TrabalhoHerois.View.FormVilao
                     foreach (string i in clbVilao.CheckedItems)
                     {
                         Match match = Regex.Match(i, @"(?<=\-)\-?\d+");
-                        vilao.IdVilao = Convert.ToInt32(match.Value);
+                        vilao.IdPessoa = Convert.ToInt32(match.Value);
                         DAO.excluir(vilao);
                     }
                     met.atualizaLista(clbVilao, "viloes", "idVilao");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao excluir o ID " + vilao.IdVilao + "\nERROR:" + ex.Message);
+                    MessageBox.Show("Erro ao excluir o ID " + vilao.IdPessoa + "\nERROR:" + ex.Message);
                 }
         }
     }
