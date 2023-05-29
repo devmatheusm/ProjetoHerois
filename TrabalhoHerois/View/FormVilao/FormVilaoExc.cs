@@ -24,21 +24,21 @@ namespace TrabalhoHerois.View.FormVilao
 
         private void btExcAmigo_Click(object sender, System.EventArgs e)
         {
-
-            try
-            {
-                foreach (string i in clbVilao.CheckedItems)
+            if (MessageBox.Show("Deseja excluir o(s) cadastro(s) selecionado(s)?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                try
                 {
-                    Match match = Regex.Match(i, @"(?<=\-)\-?\d+");
-                    vilao.IdPessoa = Convert.ToInt32(match.Value);
-                    DAO.excluir(vilao);
+                    foreach (string i in clbVilao.CheckedItems)
+                    {
+                        Match match = Regex.Match(i, @"(?<=\-)\-?\d+");
+                        vilao.IdVilao = Convert.ToInt32(match.Value);
+                        DAO.excluir(vilao);
+                    }
+                    met.atualizaLista(clbVilao, "viloes", "idVilao");
                 }
-                met.atualizaLista(clbVilao, "viloes", "idVilao");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao excluir o ID " + vilao.IdPessoa + "\nERROR:" + ex.Message);
-            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao excluir o ID " + vilao.IdVilao + "\nERROR:" + ex.Message);
+                }
         }
     }
 }

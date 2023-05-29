@@ -121,6 +121,7 @@
             this.dtpNasc.Location = new System.Drawing.Point(104, 176);
             this.dtpNasc.Margin = new System.Windows.Forms.Padding(3, 15, 3, 25);
             this.dtpNasc.Name = "dtpNasc";
+            this.dtpNasc.ShowUpDown = true;
             this.dtpNasc.Size = new System.Drawing.Size(78, 20);
             this.dtpNasc.TabIndex = 2;
             // 
