@@ -8,21 +8,23 @@ namespace TrabalhoHerois.View.FormVilao
 {
     public partial class FormVilaoCad : Form
     {
-        //Instancia a classe de metodos
-        Methods met = new Methods();
+        //PROTOTIPO DOS OBJETOS
+        Methods met;
         VilaoDAO dao;
+        Vilao vilao;
+        //CONSTRUTOR DO FORMVILAOCAD
         public FormVilaoCad()
         {
             InitializeComponent();
+            met = new Methods();
             dao = new VilaoDAO();
+            vilao = new Vilao();
         }
-
         //Ao clicar nesse Botão é pego todas as informações contidas dentro dos textbox
         //e registra no banco de dados
         #region cadastro de informação
         private void bt_enviar_Click(object sender, EventArgs e)
         {
-            Vilao vilao = new Vilao();
             bool concluido = true;
             try
             {

@@ -28,51 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cadVilao = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbCadVilao = new System.Windows.Forms.Label();
+            this.lbNomeVilao = new System.Windows.Forms.Label();
             this.tbNome = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbEmailVilao = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.dtpNasc = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbNascVilao = new System.Windows.Forms.Label();
+            this.lbPlanetaVilao = new System.Windows.Forms.Label();
             this.tbPlaneta = new System.Windows.Forms.TextBox();
             this.tbPoder = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbPoderVilao = new System.Windows.Forms.Label();
             this.tbParceiro = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbParcVilao = new System.Windows.Forms.Label();
             this.tbApelido = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbApelidoVilao = new System.Windows.Forms.Label();
+            this.lbFotoVilao = new System.Windows.Forms.Label();
             this.btUpload = new System.Windows.Forms.Button();
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.bt_enviar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
-            // cadVilao
+            // lbCadVilao
             // 
-            this.cadVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cadVilao.AutoSize = true;
-            this.cadVilao.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cadVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cadVilao.Location = new System.Drawing.Point(218, 20);
-            this.cadVilao.Margin = new System.Windows.Forms.Padding(10);
-            this.cadVilao.Name = "cadVilao";
-            this.cadVilao.Size = new System.Drawing.Size(204, 29);
-            this.cadVilao.TabIndex = 0;
-            this.cadVilao.Text = "Cadastro do Vilão";
+            this.lbCadVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbCadVilao.AutoSize = true;
+            this.lbCadVilao.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCadVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbCadVilao.Location = new System.Drawing.Point(218, 20);
+            this.lbCadVilao.Margin = new System.Windows.Forms.Padding(10);
+            this.lbCadVilao.Name = "lbCadVilao";
+            this.lbCadVilao.Size = new System.Drawing.Size(204, 29);
+            this.lbCadVilao.TabIndex = 0;
+            this.lbCadVilao.Text = "Cadastro do Vilão";
             // 
-            // label1
+            // lbNomeVilao
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(101, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "1. Nome do Vilão *";
+            this.lbNomeVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbNomeVilao.AutoSize = true;
+            this.lbNomeVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbNomeVilao.Location = new System.Drawing.Point(101, 75);
+            this.lbNomeVilao.Name = "lbNomeVilao";
+            this.lbNomeVilao.Size = new System.Drawing.Size(95, 13);
+            this.lbNomeVilao.TabIndex = 1;
+            this.lbNomeVilao.Text = "1. Nome do Vilão *";
             // 
             // tbNome
             // 
@@ -88,16 +88,16 @@
             this.tbNome.Enter += new System.EventHandler(this.tbNome_Enter);
             this.tbNome.Leave += new System.EventHandler(this.tbNome_Leave);
             // 
-            // label2
+            // lbEmailVilao
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(190, 148);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "3. Email *";
+            this.lbEmailVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbEmailVilao.AutoSize = true;
+            this.lbEmailVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbEmailVilao.Location = new System.Drawing.Point(190, 148);
+            this.lbEmailVilao.Name = "lbEmailVilao";
+            this.lbEmailVilao.Size = new System.Drawing.Size(51, 13);
+            this.lbEmailVilao.TabIndex = 5;
+            this.lbEmailVilao.Text = "3. Email *";
             // 
             // tbEmail
             // 
@@ -125,27 +125,27 @@
             this.dtpNasc.Size = new System.Drawing.Size(78, 20);
             this.dtpNasc.TabIndex = 2;
             // 
-            // label3
+            // lbNascVilao
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(101, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "2. Ano de Nasc";
+            this.lbNascVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbNascVilao.AutoSize = true;
+            this.lbNascVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbNascVilao.Location = new System.Drawing.Point(101, 148);
+            this.lbNascVilao.Name = "lbNascVilao";
+            this.lbNascVilao.Size = new System.Drawing.Size(81, 13);
+            this.lbNascVilao.TabIndex = 7;
+            this.lbNascVilao.Text = "2. Ano de Nasc";
             // 
-            // label4
+            // lbPlanetaVilao
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(101, 221);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "4. Planeta de Origem *";
+            this.lbPlanetaVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbPlanetaVilao.AutoSize = true;
+            this.lbPlanetaVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbPlanetaVilao.Location = new System.Drawing.Point(101, 221);
+            this.lbPlanetaVilao.Name = "lbPlanetaVilao";
+            this.lbPlanetaVilao.Size = new System.Drawing.Size(113, 13);
+            this.lbPlanetaVilao.TabIndex = 9;
+            this.lbPlanetaVilao.Text = "4. Planeta de Origem *";
             // 
             // tbPlaneta
             // 
@@ -175,16 +175,16 @@
             this.tbPoder.Enter += new System.EventHandler(this.tbPoder_Enter);
             this.tbPoder.Leave += new System.EventHandler(this.tbPoder_Leave);
             // 
-            // label5
+            // lbPoderVilao
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(247, 221);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "5. Super Poder *";
+            this.lbPoderVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbPoderVilao.AutoSize = true;
+            this.lbPoderVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbPoderVilao.Location = new System.Drawing.Point(247, 221);
+            this.lbPoderVilao.Name = "lbPoderVilao";
+            this.lbPoderVilao.Size = new System.Drawing.Size(85, 13);
+            this.lbPoderVilao.TabIndex = 11;
+            this.lbPoderVilao.Text = "5. Super Poder *";
             // 
             // tbParceiro
             // 
@@ -200,16 +200,16 @@
             this.tbParceiro.Enter += new System.EventHandler(this.tbParceiro_Enter);
             this.tbParceiro.Leave += new System.EventHandler(this.tbParceiro_Leave);
             // 
-            // label6
+            // lbParcVilao
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(395, 221);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "6. Parceiro Amoroso *";
+            this.lbParcVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbParcVilao.AutoSize = true;
+            this.lbParcVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbParcVilao.Location = new System.Drawing.Point(395, 221);
+            this.lbParcVilao.Name = "lbParcVilao";
+            this.lbParcVilao.Size = new System.Drawing.Size(109, 13);
+            this.lbParcVilao.TabIndex = 13;
+            this.lbParcVilao.Text = "6. Parceiro Amoroso *";
             // 
             // tbApelido
             // 
@@ -225,27 +225,27 @@
             this.tbApelido.Enter += new System.EventHandler(this.tbApelido_Enter);
             this.tbApelido.Leave += new System.EventHandler(this.tbApelido_Leave);
             // 
-            // label7
+            // lbApelidoVilao
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(101, 294);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "7. Apelido do Vilão *";
+            this.lbApelidoVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbApelidoVilao.AutoSize = true;
+            this.lbApelidoVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbApelidoVilao.Location = new System.Drawing.Point(101, 294);
+            this.lbApelidoVilao.Name = "lbApelidoVilao";
+            this.lbApelidoVilao.Size = new System.Drawing.Size(102, 13);
+            this.lbApelidoVilao.TabIndex = 15;
+            this.lbApelidoVilao.Text = "7. Apelido do Vilão *";
             // 
-            // label8
+            // lbFotoVilao
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(370, 293);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "8. Foto do Vilão";
+            this.lbFotoVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbFotoVilao.AutoSize = true;
+            this.lbFotoVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbFotoVilao.Location = new System.Drawing.Point(370, 293);
+            this.lbFotoVilao.Name = "lbFotoVilao";
+            this.lbFotoVilao.Size = new System.Drawing.Size(81, 13);
+            this.lbFotoVilao.TabIndex = 17;
+            this.lbFotoVilao.Text = "8. Foto do Vilão";
             // 
             // btUpload
             // 
@@ -306,22 +306,22 @@
             this.Controls.Add(this.bt_enviar);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.btUpload);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lbFotoVilao);
             this.Controls.Add(this.tbApelido);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbApelidoVilao);
             this.Controls.Add(this.tbParceiro);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbParcVilao);
             this.Controls.Add(this.tbPoder);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbPoderVilao);
             this.Controls.Add(this.tbPlaneta);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbPlanetaVilao);
             this.Controls.Add(this.dtpNasc);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbNascVilao);
             this.Controls.Add(this.tbEmail);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbEmailVilao);
             this.Controls.Add(this.tbNome);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cadVilao);
+            this.Controls.Add(this.lbNomeVilao);
+            this.Controls.Add(this.lbCadVilao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormVilaoCad";
             this.Padding = new System.Windows.Forms.Padding(10);
@@ -334,22 +334,22 @@
 
         #endregion
 
-        private System.Windows.Forms.Label cadVilao;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbCadVilao;
+        private System.Windows.Forms.Label lbNomeVilao;
         private System.Windows.Forms.TextBox tbNome;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbEmailVilao;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.DateTimePicker dtpNasc;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbNascVilao;
+        private System.Windows.Forms.Label lbPlanetaVilao;
         private System.Windows.Forms.TextBox tbPlaneta;
         private System.Windows.Forms.TextBox tbPoder;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbPoderVilao;
         private System.Windows.Forms.TextBox tbParceiro;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbParcVilao;
         private System.Windows.Forms.TextBox tbApelido;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbApelidoVilao;
+        private System.Windows.Forms.Label lbFotoVilao;
         private System.Windows.Forms.Button btUpload;
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Button bt_enviar;

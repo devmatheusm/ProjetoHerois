@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace TrabalhoHerois.Model.DAO
+﻿namespace TrabalhoHerois.Model.DAO
 {
     interface IDao
     {

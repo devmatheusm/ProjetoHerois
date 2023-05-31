@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using TrabalhoHerois.Model.DAO;
 using TrabalhoHerois.Model.Entities;
@@ -20,6 +16,7 @@ namespace TrabalhoHerois.Controller
 
         //metodo para a exclusão de dados do banco de dados
         #region metodos de exclusão
+        //metodo que insere dentro de uma checkedlistbox todos os NOMES e IDS que possam ser excluidos
         public void atualizaLista(CheckedListBox clb, string nomeTabela, string idPessoa)
         {
             try
@@ -47,7 +44,7 @@ namespace TrabalhoHerois.Controller
 
         //metodos para a consulta no banco de dados
         #region metodos de consulta
-
+        //metodo que faz uma consulta geral e inserer dentro de um datagridview
         public void consultaGeral(DataGridView dgv, string nomeTabela)
         {
             string sql = "select * from " + nomeTabela;
@@ -61,6 +58,7 @@ namespace TrabalhoHerois.Controller
             data.Fill(dataSetTable);
             dgv.DataSource = dataSetTable.Tables[0];
         }
+        //metodo que faz uma consulta por ID e insere dentro do datagridview
         public void consultaId(DataGridView dgv, string nomeTabela, string whereId, int idPessoa)//(usado tambem na atualização)
         {
             try
@@ -76,16 +74,16 @@ namespace TrabalhoHerois.Controller
                 data.Fill(dataSetTable);
                 dgv.DataSource = dataSetTable.Tables[0];
             }
-            catch (Exception ex) 
-            { 
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
             }
-            finally 
+            finally
             {
                 Conexao.fecharConexao();
             }
         }
-
+        //metodo que faz a consulta e mostra dentro de um combobox o ID e o NOME 
         public void atualizaLista(ComboBox cb, string nomeTabela, string idPessoa)//(usado tambem na atualização)
         {
             try
@@ -100,9 +98,9 @@ namespace TrabalhoHerois.Controller
                 }
                 dr.Close();
             }
-            catch (Exception ex) 
-            { 
-                MessageBox.Show(ex.Message); 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -111,6 +109,7 @@ namespace TrabalhoHerois.Controller
         }
         #endregion
 
+        //metodos para a atualização que sera efetuada dentro do banco de dados
         #region metodos de atualização
         public void consultaId(DataGridView dgv, string nomeTabela, string whereId, int idPessoa, string SQLquery)//(usado tambem na atualização)
         {
@@ -128,9 +127,9 @@ namespace TrabalhoHerois.Controller
                 dgv.DataSource = dataSetTable.Tables[0];
                 dgv.Columns.Remove("ID");
             }
-            catch(SqlException ex) 
-            { 
-                MessageBox.Show(ex.Message); 
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             finally
             {
@@ -138,33 +137,34 @@ namespace TrabalhoHerois.Controller
             }
         }
 
+        //metodo que faz o update da tabela sql por meio de um datagridview
         public void atualizaCad()
         {
             sqlbd = new SqlCommandBuilder(data);
             data.Update(dataSetTable);
         }
 
+        //metodo que atualiza automaticamente com base no ano fornecido quando atualiza um dado
         public void atualizaIdadeBD(string nomeTabela, string whereId, int idPessoa)
         {
             try
             {
-                string sql = "select anoNasc as ANO from " + nomeTabela + " where " + whereId + " = " + idPessoa;
+                string sql = "select anoNasc from " + nomeTabela + " where " + whereId + " = " + idPessoa;
                 SqlCommand exesql = new SqlCommand(sql, Conexao.obterConexao());
-
                 SqlDataReader sqlread = exesql.ExecuteReader();
                 sqlread.Read();
-                pessoa.calcularIdade(Convert.ToInt32(sqlread["ANO"]));
+                pessoa.calcularIdade(Convert.ToInt32(sqlread["anoNasc"]));
                 sql = "update " + nomeTabela + " set idade = " + pessoa.Idade + " where " + whereId + " = " + idPessoa;
                 exesql = new SqlCommand(sql, Conexao.obterConexao());
                 exesql.ExecuteNonQuery();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message); 
+                MessageBox.Show(ex.Message);
             }
-            finally 
-            { 
-                Conexao.fecharConexao(); 
+            finally
+            {
+                Conexao.fecharConexao();
             }
         }
         #endregion

@@ -2,6 +2,7 @@
 {
     public class Heroi : Pessoa
     {
+        //VARIAVEIS DO HEROI
         protected string nomeHeroi;
         protected string grupo;
         protected string parceiro;
@@ -9,12 +10,12 @@
         protected string superPoder;
         protected string pontoFraco;
 
-        // CONSTRUTOR
+        // CONSTRUTOR DO HEROI
         public Heroi() : base()
         {
             nomeHeroi = grupo = parceiro = planetaOrigem = superPoder = pontoFraco = "";
         }
-        // PROPRIEDADES
+        // PROPRIEDADES DO HEROI
         public string NomeHeroi
         {
             get { return nomeHeroi; }
@@ -48,9 +49,14 @@
         }
     }
 }
+
+
+
+
+
+
 /* SE VOCE ESTA LENDO ESSA PARTE AQUI
-TOME UM BATMAN DE PRESENTE
-voce eh bacana =) */
+TOME UM BATMAN DE PRESENTE*/
 
 //
 //                          ,*.                   .*,                            
@@ -85,3 +91,4 @@ voce eh bacana =) */
 //#%&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&%#*..   ..*#%&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&%#(
 //%&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&@&%(///(%&@&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&%%
 //@&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&%%%&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&@@
+

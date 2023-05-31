@@ -31,7 +31,7 @@
             this.cbAtuAmigo = new System.Windows.Forms.ComboBox();
             this.btAtuAmigo = new System.Windows.Forms.Button();
             this.dgvAtuAmigo = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbAtuAmigo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAtuAmigo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +67,6 @@
             // 
             this.dgvAtuAmigo.AllowUserToAddRows = false;
             this.dgvAtuAmigo.AllowUserToDeleteRows = false;
-            this.dgvAtuAmigo.AllowUserToOrderColumns = true;
             this.dgvAtuAmigo.AllowUserToResizeColumns = false;
             this.dgvAtuAmigo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -80,18 +79,18 @@
             this.dgvAtuAmigo.Size = new System.Drawing.Size(611, 266);
             this.dgvAtuAmigo.TabIndex = 52;
             // 
-            // label2
+            // lbAtuAmigo
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(110, 19);
-            this.label2.Margin = new System.Windows.Forms.Padding(10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(415, 29);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Atualizar Cadastro do Amigo do Heroi";
+            this.lbAtuAmigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbAtuAmigo.AutoSize = true;
+            this.lbAtuAmigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAtuAmigo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbAtuAmigo.Location = new System.Drawing.Point(110, 19);
+            this.lbAtuAmigo.Margin = new System.Windows.Forms.Padding(10);
+            this.lbAtuAmigo.Name = "lbAtuAmigo";
+            this.lbAtuAmigo.Size = new System.Drawing.Size(415, 29);
+            this.lbAtuAmigo.TabIndex = 56;
+            this.lbAtuAmigo.Text = "Atualizar Cadastro do Amigo do Heroi";
             // 
             // FormAmigoAtu
             // 
@@ -99,7 +98,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(635, 400);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbAtuAmigo);
             this.Controls.Add(this.cbAtuAmigo);
             this.Controls.Add(this.btAtuAmigo);
             this.Controls.Add(this.dgvAtuAmigo);
@@ -117,6 +116,6 @@
         private System.Windows.Forms.ComboBox cbAtuAmigo;
         private System.Windows.Forms.Button btAtuAmigo;
         private System.Windows.Forms.DataGridView dgvAtuAmigo;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbAtuAmigo;
     }
 }

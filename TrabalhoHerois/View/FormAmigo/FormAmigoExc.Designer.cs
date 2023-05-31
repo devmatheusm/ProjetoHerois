@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbExcAmigo = new System.Windows.Forms.Label();
             this.clbAmigo = new System.Windows.Forms.CheckedListBox();
             this.btExcAmigo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lbExcAmigo
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(171, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(293, 29);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "Excluir do Amigo do Heroi";
+            this.lbExcAmigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbExcAmigo.AutoSize = true;
+            this.lbExcAmigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbExcAmigo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbExcAmigo.Location = new System.Drawing.Point(171, 19);
+            this.lbExcAmigo.Margin = new System.Windows.Forms.Padding(10);
+            this.lbExcAmigo.Name = "lbExcAmigo";
+            this.lbExcAmigo.Size = new System.Drawing.Size(293, 29);
+            this.lbExcAmigo.TabIndex = 48;
+            this.lbExcAmigo.Text = "Excluir do Amigo do Heroi";
             // 
             // clbAmigo
             // 
@@ -69,7 +69,7 @@
             this.btExcAmigo.Tag = "EXCLUIR";
             this.btExcAmigo.Text = "EXCLUIR";
             this.btExcAmigo.UseVisualStyleBackColor = false;
-            this.btExcAmigo.Click += new System.EventHandler(this.button1_Click);
+            this.btExcAmigo.Click += new System.EventHandler(this.btExcVilao_Click);
             // 
             // FormAmigoExc
             // 
@@ -79,7 +79,7 @@
             this.ClientSize = new System.Drawing.Size(635, 400);
             this.Controls.Add(this.btExcAmigo);
             this.Controls.Add(this.clbAmigo);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbExcAmigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAmigoExc";
             this.Text = "FormAmigoExc";
@@ -90,7 +90,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbExcAmigo;
         private System.Windows.Forms.CheckedListBox clbAmigo;
         private System.Windows.Forms.Button btExcAmigo;
     }

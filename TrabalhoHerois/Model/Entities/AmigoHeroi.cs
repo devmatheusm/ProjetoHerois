@@ -2,13 +2,14 @@
 {
     public class AmigoHeroi : Pessoa
     {
+        //VARIAVEL DO AMIGO
         protected string hobby;
-        // CONSTRUTORES
+        // CONSTRUTOR DO AMIGO
         public AmigoHeroi() : base()
         {
             hobby = "";
         }
-        // PROPRIEDADES
+        // PROPRIEDADE DO AMIGO
         public string Hobby
         {
             get { return hobby; }

@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.clbHeroi = new System.Windows.Forms.CheckedListBox();
-            this.btExcAmigo = new System.Windows.Forms.Button();
+            this.btExcHeroi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -57,19 +57,19 @@
             this.clbHeroi.Size = new System.Drawing.Size(611, 244);
             this.clbHeroi.TabIndex = 53;
             // 
-            // btExcAmigo
+            // btExcHeroi
             // 
-            this.btExcAmigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btExcAmigo.BackColor = System.Drawing.Color.White;
-            this.btExcAmigo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btExcAmigo.Location = new System.Drawing.Point(259, 325);
-            this.btExcAmigo.Name = "btExcAmigo";
-            this.btExcAmigo.Size = new System.Drawing.Size(121, 63);
-            this.btExcAmigo.TabIndex = 54;
-            this.btExcAmigo.Tag = "EXCLUIR";
-            this.btExcAmigo.Text = "EXCLUIR";
-            this.btExcAmigo.UseVisualStyleBackColor = false;
-            this.btExcAmigo.Click += new System.EventHandler(this.btExcAmigo_Click);
+            this.btExcHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btExcHeroi.BackColor = System.Drawing.Color.White;
+            this.btExcHeroi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btExcHeroi.Location = new System.Drawing.Point(259, 325);
+            this.btExcHeroi.Name = "btExcHeroi";
+            this.btExcHeroi.Size = new System.Drawing.Size(121, 63);
+            this.btExcHeroi.TabIndex = 54;
+            this.btExcHeroi.Tag = "EXCLUIR";
+            this.btExcHeroi.Text = "EXCLUIR";
+            this.btExcHeroi.UseVisualStyleBackColor = false;
+            this.btExcHeroi.Click += new System.EventHandler(this.btExcHeroi_Click);
             // 
             // FormHeroiExc
             // 
@@ -77,7 +77,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(635, 400);
-            this.Controls.Add(this.btExcAmigo);
+            this.Controls.Add(this.btExcHeroi);
             this.Controls.Add(this.clbHeroi);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -93,6 +93,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox clbHeroi;
-        private System.Windows.Forms.Button btExcAmigo;
+        private System.Windows.Forms.Button btExcHeroi;
     }
 }

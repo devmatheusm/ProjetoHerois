@@ -31,38 +31,38 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuCad));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbIcon = new System.Windows.Forms.PictureBox();
             this.bt_friend = new System.Windows.Forms.Button();
             this.bt_hero = new System.Windows.Forms.Button();
-            this.bt_villain = new System.Windows.Forms.Button();
             this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.painelMenu = new System.Windows.Forms.Panel();
+            this.cmHeroi = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmAmigo = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmVilao = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bt_min = new System.Windows.Forms.Button();
             this.bt_max = new System.Windows.Forms.Button();
             this.bt_close = new System.Windows.Forms.Button();
             this.Header = new System.Windows.Forms.PictureBox();
-            this.painelMenu = new System.Windows.Forms.Panel();
-            this.cmHeroi = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pbIcon = new System.Windows.Forms.PictureBox();
+            this.bt_villain = new System.Windows.Forms.Button();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmAmigo = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmVilao = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmCadVilao = new System.Windows.Forms.ToolStripMenuItem();
             this.cmAtuVilao = new System.Windows.Forms.ToolStripMenuItem();
             this.cmConVilao = new System.Windows.Forms.ToolStripMenuItem();
             this.cmExcVilao = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             this.HeaderPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Header)).BeginInit();
             this.cmHeroi.SuspendLayout();
             this.cmAmigo.SuspendLayout();
             this.cmVilao.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Header)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -78,19 +78,9 @@
             this.panel1.Size = new System.Drawing.Size(165, 450);
             this.panel1.TabIndex = 0;
             // 
-            // pbIcon
-            // 
-            this.pbIcon.BackgroundImage = global::TrabalhoHerois.Properties.Resources.hero_header;
-            this.pbIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbIcon.Location = new System.Drawing.Point(0, 0);
-            this.pbIcon.Name = "pbIcon";
-            this.pbIcon.Size = new System.Drawing.Size(165, 50);
-            this.pbIcon.TabIndex = 4;
-            this.pbIcon.TabStop = false;
-            // 
             // bt_friend
             // 
-            this.bt_friend.BackColor = System.Drawing.Color.Black;
+            this.bt_friend.BackColor = System.Drawing.Color.Transparent;
             this.bt_friend.FlatAppearance.BorderSize = 0;
             this.bt_friend.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(56)))), ((int)(((byte)(102)))));
             this.bt_friend.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -98,6 +88,8 @@
             this.bt_friend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_friend.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_friend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bt_friend.Image = global::TrabalhoHerois.Properties.Resources.amigoestoaqui;
+            this.bt_friend.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_friend.Location = new System.Drawing.Point(0, 103);
             this.bt_friend.Name = "bt_friend";
             this.bt_friend.Size = new System.Drawing.Size(165, 53);
@@ -118,6 +110,7 @@
             this.bt_hero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_hero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_hero.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bt_hero.Image = global::TrabalhoHerois.Properties.Resources.Heroi;
             this.bt_hero.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_hero.Location = new System.Drawing.Point(0, 50);
             this.bt_hero.Name = "bt_hero";
@@ -127,27 +120,6 @@
             this.bt_hero.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_hero.UseVisualStyleBackColor = false;
             this.bt_hero.Click += new System.EventHandler(this.bt_hero_Click);
-            // 
-            // bt_villain
-            // 
-            this.bt_villain.BackColor = System.Drawing.Color.Black;
-            this.bt_villain.FlatAppearance.BorderSize = 0;
-            this.bt_villain.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(56)))), ((int)(((byte)(102)))));
-            this.bt_villain.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
-            this.bt_villain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo;
-            this.bt_villain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_villain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_villain.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bt_villain.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bt_villain.Location = new System.Drawing.Point(0, 156);
-            this.bt_villain.Margin = new System.Windows.Forms.Padding(0);
-            this.bt_villain.Name = "bt_villain";
-            this.bt_villain.Size = new System.Drawing.Size(165, 53);
-            this.bt_villain.TabIndex = 3;
-            this.bt_villain.Text = "SUPER-VILÃO";
-            this.bt_villain.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_villain.UseVisualStyleBackColor = false;
-            this.bt_villain.Click += new System.EventHandler(this.bt_villain_Click);
             // 
             // HeaderPanel
             // 
@@ -161,6 +133,55 @@
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(635, 50);
             this.HeaderPanel.TabIndex = 1;
+            // 
+            // painelMenu
+            // 
+            this.painelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.painelMenu.Location = new System.Drawing.Point(165, 50);
+            this.painelMenu.Name = "painelMenu";
+            this.painelMenu.Size = new System.Drawing.Size(635, 400);
+            this.painelMenu.TabIndex = 2;
+            // 
+            // cmHeroi
+            // 
+            this.cmHeroi.BackColor = System.Drawing.Color.Navy;
+            this.cmHeroi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarToolStripMenuItem,
+            this.atualizarToolStripMenuItem,
+            this.consultarcToolStripMenuItem,
+            this.excluirToolStripMenuItem});
+            this.cmHeroi.Name = "cmHeroi";
+            this.cmHeroi.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.cmHeroi.Size = new System.Drawing.Size(126, 92);
+            this.cmHeroi.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmHeroi_ItemClicked);
+            // 
+            // cmAmigo
+            // 
+            this.cmAmigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmAmigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cmAmigo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarToolStripMenuItem,
+            this.atualizarToolStripMenuItem1,
+            this.consultarToolStripMenuItem1,
+            this.excluirToolStripMenuItem1});
+            this.cmAmigo.Name = "cmAmigo";
+            this.cmAmigo.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.cmAmigo.ShowCheckMargin = true;
+            this.cmAmigo.Size = new System.Drawing.Size(148, 92);
+            this.cmAmigo.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmAmigo_ItemClicked);
+            // 
+            // cmVilao
+            // 
+            this.cmVilao.BackColor = System.Drawing.Color.Indigo;
+            this.cmVilao.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmCadVilao,
+            this.cmAtuVilao,
+            this.cmConVilao,
+            this.cmExcVilao});
+            this.cmVilao.Name = "cmVilao";
+            this.cmVilao.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.cmVilao.Size = new System.Drawing.Size(126, 92);
+            this.cmVilao.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmVilao_ItemClicked);
             // 
             // bt_min
             // 
@@ -215,26 +236,37 @@
             this.Header.TabIndex = 0;
             this.Header.TabStop = false;
             // 
-            // painelMenu
+            // pbIcon
             // 
-            this.painelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.painelMenu.Location = new System.Drawing.Point(165, 50);
-            this.painelMenu.Name = "painelMenu";
-            this.painelMenu.Size = new System.Drawing.Size(635, 400);
-            this.painelMenu.TabIndex = 2;
+            this.pbIcon.BackgroundImage = global::TrabalhoHerois.Properties.Resources.hero_header;
+            this.pbIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbIcon.Location = new System.Drawing.Point(0, 0);
+            this.pbIcon.Name = "pbIcon";
+            this.pbIcon.Size = new System.Drawing.Size(165, 50);
+            this.pbIcon.TabIndex = 4;
+            this.pbIcon.TabStop = false;
             // 
-            // cmHeroi
+            // bt_villain
             // 
-            this.cmHeroi.BackColor = System.Drawing.Color.Navy;
-            this.cmHeroi.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem,
-            this.atualizarToolStripMenuItem,
-            this.consultarcToolStripMenuItem,
-            this.excluirToolStripMenuItem});
-            this.cmHeroi.Name = "cmHeroi";
-            this.cmHeroi.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.cmHeroi.Size = new System.Drawing.Size(126, 92);
-            this.cmHeroi.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmHeroi_ItemClicked);
+            this.bt_villain.BackColor = System.Drawing.Color.Transparent;
+            this.bt_villain.FlatAppearance.BorderSize = 0;
+            this.bt_villain.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(56)))), ((int)(((byte)(102)))));
+            this.bt_villain.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Indigo;
+            this.bt_villain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Indigo;
+            this.bt_villain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_villain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_villain.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bt_villain.Image = global::TrabalhoHerois.Properties.Resources.Vilain;
+            this.bt_villain.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bt_villain.Location = new System.Drawing.Point(0, 156);
+            this.bt_villain.Margin = new System.Windows.Forms.Padding(0);
+            this.bt_villain.Name = "bt_villain";
+            this.bt_villain.Size = new System.Drawing.Size(165, 53);
+            this.bt_villain.TabIndex = 3;
+            this.bt_villain.Text = "SUPER-VILÃO";
+            this.bt_villain.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_villain.UseVisualStyleBackColor = false;
+            this.bt_villain.Click += new System.EventHandler(this.bt_villain_Click);
             // 
             // cadastrarToolStripMenuItem
             // 
@@ -268,20 +300,6 @@
             this.excluirToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.excluirToolStripMenuItem.Text = "Excluir";
             // 
-            // cmAmigo
-            // 
-            this.cmAmigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cmAmigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.cmAmigo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarToolStripMenuItem,
-            this.atualizarToolStripMenuItem1,
-            this.consultarToolStripMenuItem1,
-            this.excluirToolStripMenuItem1});
-            this.cmAmigo.Name = "cmAmigo";
-            this.cmAmigo.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.cmAmigo.Size = new System.Drawing.Size(126, 92);
-            this.cmAmigo.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmAmigo_ItemClicked);
-            // 
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
@@ -313,19 +331,6 @@
             this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
             this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
             this.excluirToolStripMenuItem1.Text = "Excluir";
-            // 
-            // cmVilao
-            // 
-            this.cmVilao.BackColor = System.Drawing.Color.Indigo;
-            this.cmVilao.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmCadVilao,
-            this.cmAtuVilao,
-            this.cmConVilao,
-            this.cmExcVilao});
-            this.cmVilao.Name = "cmVilao";
-            this.cmVilao.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.cmVilao.Size = new System.Drawing.Size(126, 92);
-            this.cmVilao.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.cmVilao_ItemClicked);
             // 
             // cmCadVilao
             // 
@@ -373,12 +378,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario DC";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             this.HeaderPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Header)).EndInit();
             this.cmHeroi.ResumeLayout(false);
             this.cmAmigo.ResumeLayout(false);
             this.cmVilao.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Header)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
