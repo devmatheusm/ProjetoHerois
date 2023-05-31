@@ -4,6 +4,7 @@ namespace TrabalhoHerois.Model.Entities
 {
     public class Pessoa
     {
+        //VARIAVEIS GERAIS DA PESSOA
         protected int idPessoa;
         protected string nomePessoa;
         protected int idade;
@@ -11,13 +12,13 @@ namespace TrabalhoHerois.Model.Entities
         protected string caminhoImagem;
         protected int anoNasc;
         protected string atividadeProfissional;
-        // CONSTRUTORES
+        // CONSTRUTOR DA PESSOA
         public Pessoa()
         {
             idPessoa = idade = anoNasc = 0;
             nomePessoa = email = caminhoImagem = atividadeProfissional = "";
         }
-        // PROPRIEDADES
+        // PROPRIEDADES DA PESSOA
         public int IdPessoa
         {
             get { return idPessoa; }
@@ -53,8 +54,9 @@ namespace TrabalhoHerois.Model.Entities
             get { return atividadeProfissional; }
             set { atividadeProfissional = value; }
         }
-        // METODO
-        public void calcularIdade(int AnoNascimento) // CADE O ANO NASCIMENTO
+        // METODO DA PESSOA
+        //metodo que calcula a idade
+        public void calcularIdade(int AnoNascimento)
         {
             idade = DateTime.Today.Year - AnoNascimento;
             return;

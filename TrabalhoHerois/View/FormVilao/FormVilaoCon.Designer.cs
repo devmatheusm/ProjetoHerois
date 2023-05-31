@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.btPerIDVilao = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnConsVilao = new System.Windows.Forms.Panel();
             this.cbConIdVilao = new System.Windows.Forms.ComboBox();
             this.btConsGeralVilao = new System.Windows.Forms.Button();
             this.dgvVilaoCon = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.lbConsVilao = new System.Windows.Forms.Label();
+            this.pnConsVilao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVilaoCon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,19 +48,19 @@
             this.btPerIDVilao.UseVisualStyleBackColor = true;
             this.btPerIDVilao.Click += new System.EventHandler(this.btPerIDVilao_Click);
             // 
-            // panel1
+            // pnConsVilao
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnConsVilao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.cbConIdVilao);
-            this.panel1.Controls.Add(this.btConsGeralVilao);
-            this.panel1.Controls.Add(this.btPerIDVilao);
-            this.panel1.Controls.Add(this.dgvVilaoCon);
-            this.panel1.Location = new System.Drawing.Point(12, 61);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(611, 321);
-            this.panel1.TabIndex = 57;
+            this.pnConsVilao.Controls.Add(this.cbConIdVilao);
+            this.pnConsVilao.Controls.Add(this.btConsGeralVilao);
+            this.pnConsVilao.Controls.Add(this.btPerIDVilao);
+            this.pnConsVilao.Controls.Add(this.dgvVilaoCon);
+            this.pnConsVilao.Location = new System.Drawing.Point(12, 61);
+            this.pnConsVilao.Name = "pnConsVilao";
+            this.pnConsVilao.Size = new System.Drawing.Size(611, 321);
+            this.pnConsVilao.TabIndex = 57;
             // 
             // cbConIdVilao
             // 
@@ -97,18 +97,18 @@
             this.dgvVilaoCon.Size = new System.Drawing.Size(611, 274);
             this.dgvVilaoCon.TabIndex = 53;
             // 
-            // label1
+            // lbConsVilao
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(230, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 29);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Consultar Vilão";
+            this.lbConsVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbConsVilao.AutoSize = true;
+            this.lbConsVilao.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbConsVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbConsVilao.Location = new System.Drawing.Point(230, 19);
+            this.lbConsVilao.Margin = new System.Windows.Forms.Padding(10);
+            this.lbConsVilao.Name = "lbConsVilao";
+            this.lbConsVilao.Size = new System.Drawing.Size(175, 29);
+            this.lbConsVilao.TabIndex = 59;
+            this.lbConsVilao.Text = "Consultar Vilão";
             // 
             // FormVilaoCon
             // 
@@ -116,12 +116,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
             this.ClientSize = new System.Drawing.Size(635, 400);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lbConsVilao);
+            this.Controls.Add(this.pnConsVilao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormVilaoCon";
             this.Text = "FormVilaoCon";
-            this.panel1.ResumeLayout(false);
+            this.pnConsVilao.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVilaoCon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -130,10 +130,10 @@
 
         #endregion
         private System.Windows.Forms.Button btPerIDVilao;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnConsVilao;
         private System.Windows.Forms.Button btConsGeralVilao;
         private System.Windows.Forms.DataGridView dgvVilaoCon;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbConsVilao;
         private System.Windows.Forms.ComboBox cbConIdVilao;
     }
 }

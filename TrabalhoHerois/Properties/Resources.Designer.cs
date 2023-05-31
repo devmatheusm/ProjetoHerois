@@ -63,6 +63,16 @@ namespace TrabalhoHerois.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap amigoestoaqui {
+            get {
+                object obj = ResourceManager.GetObject("amigoestoaqui", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap amigoIcon {
             get {
                 object obj = ResourceManager.GetObject("amigoIcon", resourceCulture);
@@ -133,6 +143,16 @@ namespace TrabalhoHerois.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Heroi {
+            get {
+                object obj = ResourceManager.GetObject("Heroi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap listIcon {
             get {
                 object obj = ResourceManager.GetObject("listIcon", resourceCulture);
@@ -166,6 +186,16 @@ namespace TrabalhoHerois.Properties {
         internal static System.Drawing.Bitmap uploadIcon {
             get {
                 object obj = ResourceManager.GetObject("uploadIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Vilain {
+            get {
+                object obj = ResourceManager.GetObject("Vilain", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

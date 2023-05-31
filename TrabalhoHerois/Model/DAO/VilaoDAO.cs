@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using TrabalhoHerois.Model.Entities;
@@ -46,7 +45,7 @@ namespace TrabalhoHerois.Model.DAO
             finally { Conexao.fecharConexao(); }
             return sucesso;
         }
-        
+
         public bool excluir(object objeto)
         {
             Vilao vilao = new Vilao();

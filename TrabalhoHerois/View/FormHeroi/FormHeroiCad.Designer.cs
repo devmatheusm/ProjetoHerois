@@ -30,28 +30,28 @@
         {
             this.pbFoto = new System.Windows.Forms.PictureBox();
             this.btUpload = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbFotoHeroi = new System.Windows.Forms.Label();
             this.tbApelido = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbApelidoHeroi = new System.Windows.Forms.Label();
             this.tbParceiro = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbParcHeroi = new System.Windows.Forms.Label();
             this.tbPoder = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbPoderHeroi = new System.Windows.Forms.Label();
             this.tbPlaneta = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbPlanetaHeroi = new System.Windows.Forms.Label();
             this.dtpNasc = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbNascHeroi = new System.Windows.Forms.Label();
             this.tbEmail = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbEmailHeroi = new System.Windows.Forms.Label();
             this.tbNome = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cadVilao = new System.Windows.Forms.Label();
+            this.lbNomeHeroi = new System.Windows.Forms.Label();
+            this.lbCadVilao = new System.Windows.Forms.Label();
             this.tbAtiPro = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbAtiviHeroi = new System.Windows.Forms.Label();
             this.tbGrupo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lbGrupoHeroi = new System.Windows.Forms.Label();
             this.tbFraco = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbFracoHeroi = new System.Windows.Forms.Label();
             this.bt_enviar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
@@ -85,16 +85,16 @@
             this.btUpload.UseVisualStyleBackColor = false;
             this.btUpload.Click += new System.EventHandler(this.btUpload_Click);
             // 
-            // label8
+            // lbFotoHeroi
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(370, 293);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 13);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "11. Foto do Heroi";
+            this.lbFotoHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbFotoHeroi.AutoSize = true;
+            this.lbFotoHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbFotoHeroi.Location = new System.Drawing.Point(370, 293);
+            this.lbFotoHeroi.Name = "lbFotoHeroi";
+            this.lbFotoHeroi.Size = new System.Drawing.Size(89, 13);
+            this.lbFotoHeroi.TabIndex = 37;
+            this.lbFotoHeroi.Text = "11. Foto do Heroi";
             // 
             // tbApelido
             // 
@@ -110,16 +110,16 @@
             this.tbApelido.Enter += new System.EventHandler(this.tbApelido_Enter);
             this.tbApelido.Leave += new System.EventHandler(this.tbApelido_Leave);
             // 
-            // label7
+            // lbApelidoHeroi
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(246, 221);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 13);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "7. Apelido do Heroi *";
+            this.lbApelidoHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbApelidoHeroi.AutoSize = true;
+            this.lbApelidoHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbApelidoHeroi.Location = new System.Drawing.Point(246, 221);
+            this.lbApelidoHeroi.Name = "lbApelidoHeroi";
+            this.lbApelidoHeroi.Size = new System.Drawing.Size(104, 13);
+            this.lbApelidoHeroi.TabIndex = 35;
+            this.lbApelidoHeroi.Text = "7. Apelido do Heroi *";
             // 
             // tbParceiro
             // 
@@ -135,16 +135,16 @@
             this.tbParceiro.Enter += new System.EventHandler(this.tbParceiro_Enter);
             this.tbParceiro.Leave += new System.EventHandler(this.tbParceiro_Leave);
             // 
-            // label6
+            // lbParcHeroi
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(101, 221);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 13);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "6. Parceiro Amoroso *";
+            this.lbParcHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbParcHeroi.AutoSize = true;
+            this.lbParcHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbParcHeroi.Location = new System.Drawing.Point(101, 221);
+            this.lbParcHeroi.Name = "lbParcHeroi";
+            this.lbParcHeroi.Size = new System.Drawing.Size(109, 13);
+            this.lbParcHeroi.TabIndex = 33;
+            this.lbParcHeroi.Text = "6. Parceiro Amoroso *";
             // 
             // tbPoder
             // 
@@ -160,16 +160,16 @@
             this.tbPoder.Enter += new System.EventHandler(this.tbPoder_Enter);
             this.tbPoder.Leave += new System.EventHandler(this.tbPoder_Leave);
             // 
-            // label5
+            // lbPoderHeroi
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(439, 148);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 13);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "5. Super Poder *";
+            this.lbPoderHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbPoderHeroi.AutoSize = true;
+            this.lbPoderHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbPoderHeroi.Location = new System.Drawing.Point(439, 148);
+            this.lbPoderHeroi.Name = "lbPoderHeroi";
+            this.lbPoderHeroi.Size = new System.Drawing.Size(85, 13);
+            this.lbPoderHeroi.TabIndex = 31;
+            this.lbPoderHeroi.Text = "5. Super Poder *";
             // 
             // tbPlaneta
             // 
@@ -185,16 +185,16 @@
             this.tbPlaneta.Enter += new System.EventHandler(this.tbPlaneta_Enter);
             this.tbPlaneta.Leave += new System.EventHandler(this.tbPlaneta_Leave);
             // 
-            // label4
+            // lbPlanetaHeroi
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(324, 148);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 13);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "4. Planeta de Origem *";
+            this.lbPlanetaHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbPlanetaHeroi.AutoSize = true;
+            this.lbPlanetaHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbPlanetaHeroi.Location = new System.Drawing.Point(324, 148);
+            this.lbPlanetaHeroi.Name = "lbPlanetaHeroi";
+            this.lbPlanetaHeroi.Size = new System.Drawing.Size(113, 13);
+            this.lbPlanetaHeroi.TabIndex = 29;
+            this.lbPlanetaHeroi.Text = "4. Planeta de Origem *";
             // 
             // dtpNasc
             // 
@@ -208,16 +208,16 @@
             this.dtpNasc.Size = new System.Drawing.Size(78, 20);
             this.dtpNasc.TabIndex = 2;
             // 
-            // label3
+            // lbNascHeroi
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(101, 148);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "2. Ano de Nasc";
+            this.lbNascHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbNascHeroi.AutoSize = true;
+            this.lbNascHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbNascHeroi.Location = new System.Drawing.Point(101, 148);
+            this.lbNascHeroi.Name = "lbNascHeroi";
+            this.lbNascHeroi.Size = new System.Drawing.Size(81, 13);
+            this.lbNascHeroi.TabIndex = 27;
+            this.lbNascHeroi.Text = "2. Ano de Nasc";
             // 
             // tbEmail
             // 
@@ -233,16 +233,16 @@
             this.tbEmail.Enter += new System.EventHandler(this.tbEmail_Enter);
             this.tbEmail.Leave += new System.EventHandler(this.tbEmail_Leave);
             // 
-            // label2
+            // lbEmailHeroi
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(190, 148);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "3. Email *";
+            this.lbEmailHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbEmailHeroi.AutoSize = true;
+            this.lbEmailHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbEmailHeroi.Location = new System.Drawing.Point(190, 148);
+            this.lbEmailHeroi.Name = "lbEmailHeroi";
+            this.lbEmailHeroi.Size = new System.Drawing.Size(51, 13);
+            this.lbEmailHeroi.TabIndex = 25;
+            this.lbEmailHeroi.Text = "3. Email *";
             // 
             // tbNome
             // 
@@ -258,29 +258,29 @@
             this.tbNome.Enter += new System.EventHandler(this.tbNome_Enter);
             this.tbNome.Leave += new System.EventHandler(this.tbNome_Leave);
             // 
-            // label1
+            // lbNomeHeroi
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(101, 75);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "1. Nome do Heroi *";
+            this.lbNomeHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbNomeHeroi.AutoSize = true;
+            this.lbNomeHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbNomeHeroi.Location = new System.Drawing.Point(101, 75);
+            this.lbNomeHeroi.Name = "lbNomeHeroi";
+            this.lbNomeHeroi.Size = new System.Drawing.Size(97, 13);
+            this.lbNomeHeroi.TabIndex = 21;
+            this.lbNomeHeroi.Text = "1. Nome do Heroi *";
             // 
-            // cadVilao
+            // lbCadVilao
             // 
-            this.cadVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cadVilao.AutoSize = true;
-            this.cadVilao.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cadVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cadVilao.Location = new System.Drawing.Point(214, 20);
-            this.cadVilao.Margin = new System.Windows.Forms.Padding(10);
-            this.cadVilao.Name = "cadVilao";
-            this.cadVilao.Size = new System.Drawing.Size(209, 29);
-            this.cadVilao.TabIndex = 20;
-            this.cadVilao.Text = "Cadastro do Heroi";
+            this.lbCadVilao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbCadVilao.AutoSize = true;
+            this.lbCadVilao.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCadVilao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbCadVilao.Location = new System.Drawing.Point(214, 20);
+            this.lbCadVilao.Margin = new System.Windows.Forms.Padding(10);
+            this.lbCadVilao.Name = "lbCadVilao";
+            this.lbCadVilao.Size = new System.Drawing.Size(209, 29);
+            this.lbCadVilao.TabIndex = 20;
+            this.lbCadVilao.Text = "Cadastro do Heroi";
             // 
             // tbAtiPro
             // 
@@ -296,16 +296,16 @@
             this.tbAtiPro.Enter += new System.EventHandler(this.tbAtiPro_Enter);
             this.tbAtiPro.Leave += new System.EventHandler(this.tbAtiPro_Leave);
             // 
-            // label9
+            // lbAtiviHeroi
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(348, 221);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 13);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "8. Atividade profissional *";
+            this.lbAtiviHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbAtiviHeroi.AutoSize = true;
+            this.lbAtiviHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbAtiviHeroi.Location = new System.Drawing.Point(348, 221);
+            this.lbAtiviHeroi.Name = "lbAtiviHeroi";
+            this.lbAtiviHeroi.Size = new System.Drawing.Size(125, 13);
+            this.lbAtiviHeroi.TabIndex = 40;
+            this.lbAtiviHeroi.Text = "8. Atividade profissional *";
             // 
             // tbGrupo
             // 
@@ -321,16 +321,16 @@
             this.tbGrupo.Enter += new System.EventHandler(this.tbGrupo_Enter);
             this.tbGrupo.Leave += new System.EventHandler(this.tbGrupo_Leave);
             // 
-            // label10
+            // lbGrupoHeroi
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(101, 293);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 13);
-            this.label10.TabIndex = 42;
-            this.label10.Text = "9. Grupo *";
+            this.lbGrupoHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbGrupoHeroi.AutoSize = true;
+            this.lbGrupoHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbGrupoHeroi.Location = new System.Drawing.Point(101, 293);
+            this.lbGrupoHeroi.Name = "lbGrupoHeroi";
+            this.lbGrupoHeroi.Size = new System.Drawing.Size(55, 13);
+            this.lbGrupoHeroi.TabIndex = 42;
+            this.lbGrupoHeroi.Text = "9. Grupo *";
             // 
             // tbFraco
             // 
@@ -346,16 +346,16 @@
             this.tbFraco.Enter += new System.EventHandler(this.tbFraco_Enter);
             this.tbFraco.Leave += new System.EventHandler(this.tbFraco_Leave);
             // 
-            // label11
+            // lbFracoHeroi
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(246, 293);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 13);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "10. Ponto Fraco *";
+            this.lbFracoHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbFracoHeroi.AutoSize = true;
+            this.lbFracoHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbFracoHeroi.Location = new System.Drawing.Point(246, 293);
+            this.lbFracoHeroi.Name = "lbFracoHeroi";
+            this.lbFracoHeroi.Size = new System.Drawing.Size(90, 13);
+            this.lbFracoHeroi.TabIndex = 44;
+            this.lbFracoHeroi.Text = "10. Ponto Fraco *";
             // 
             // bt_enviar
             // 
@@ -386,29 +386,29 @@
             this.ClientSize = new System.Drawing.Size(635, 400);
             this.Controls.Add(this.bt_enviar);
             this.Controls.Add(this.tbFraco);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lbFracoHeroi);
             this.Controls.Add(this.tbGrupo);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lbGrupoHeroi);
             this.Controls.Add(this.tbAtiPro);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lbAtiviHeroi);
             this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.btUpload);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lbFotoHeroi);
             this.Controls.Add(this.tbApelido);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbApelidoHeroi);
             this.Controls.Add(this.tbParceiro);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbParcHeroi);
             this.Controls.Add(this.tbPoder);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbPoderHeroi);
             this.Controls.Add(this.tbPlaneta);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbPlanetaHeroi);
             this.Controls.Add(this.dtpNasc);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbNascHeroi);
             this.Controls.Add(this.tbEmail);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbEmailHeroi);
             this.Controls.Add(this.tbNome);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cadVilao);
+            this.Controls.Add(this.lbNomeHeroi);
+            this.Controls.Add(this.lbCadVilao);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHeroiCad";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -423,28 +423,28 @@
 
         private System.Windows.Forms.PictureBox pbFoto;
         private System.Windows.Forms.Button btUpload;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbFotoHeroi;
         private System.Windows.Forms.TextBox tbApelido;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbApelidoHeroi;
         private System.Windows.Forms.TextBox tbParceiro;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbParcHeroi;
         private System.Windows.Forms.TextBox tbPoder;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbPoderHeroi;
         private System.Windows.Forms.TextBox tbPlaneta;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbPlanetaHeroi;
         private System.Windows.Forms.DateTimePicker dtpNasc;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbNascHeroi;
         private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbEmailHeroi;
         private System.Windows.Forms.TextBox tbNome;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label cadVilao;
+        private System.Windows.Forms.Label lbNomeHeroi;
+        private System.Windows.Forms.Label lbCadVilao;
         private System.Windows.Forms.TextBox tbAtiPro;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbAtiviHeroi;
         private System.Windows.Forms.TextBox tbGrupo;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbGrupoHeroi;
         private System.Windows.Forms.TextBox tbFraco;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbFracoHeroi;
         private System.Windows.Forms.Button bt_enviar;
     }
 }

@@ -30,7 +30,7 @@
         {
             this.cbAtuHeroi = new System.Windows.Forms.ComboBox();
             this.btAtuHeroi = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbAtuHeroi = new System.Windows.Forms.Label();
             this.dgvAtuHeroi = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAtuHeroi)).BeginInit();
             this.SuspendLayout();
@@ -63,18 +63,18 @@
             this.btAtuHeroi.UseVisualStyleBackColor = true;
             this.btAtuHeroi.Click += new System.EventHandler(this.btAtuHeroi_Click);
             // 
-            // label1
+            // lbAtuHeroi
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(164, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(306, 29);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "Atualizar Cadastro do Heroi";
+            this.lbAtuHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbAtuHeroi.AutoSize = true;
+            this.lbAtuHeroi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAtuHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbAtuHeroi.Location = new System.Drawing.Point(164, 16);
+            this.lbAtuHeroi.Margin = new System.Windows.Forms.Padding(10);
+            this.lbAtuHeroi.Name = "lbAtuHeroi";
+            this.lbAtuHeroi.Size = new System.Drawing.Size(306, 29);
+            this.lbAtuHeroi.TabIndex = 53;
+            this.lbAtuHeroi.Text = "Atualizar Cadastro do Heroi";
             // 
             // dgvAtuHeroi
             // 
@@ -95,7 +95,7 @@
             this.ClientSize = new System.Drawing.Size(635, 400);
             this.Controls.Add(this.cbAtuHeroi);
             this.Controls.Add(this.btAtuHeroi);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbAtuHeroi);
             this.Controls.Add(this.dgvAtuHeroi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHeroiAtu";
@@ -110,7 +110,7 @@
 
         private System.Windows.Forms.ComboBox cbAtuHeroi;
         private System.Windows.Forms.Button btAtuHeroi;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbAtuHeroi;
         private System.Windows.Forms.DataGridView dgvAtuHeroi;
     }
 }

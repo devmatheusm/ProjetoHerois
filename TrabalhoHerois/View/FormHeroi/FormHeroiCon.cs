@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Windows.Forms;
-using TrabalhoHerois.Model.DAO;
-using TrabalhoHerois.Model.Entities;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 using TrabalhoHerois.Controller;
+using TrabalhoHerois.Model.Entities;
 namespace TrabalhoHerois.View.FormHeroi
 {
     public partial class FormHeroiCon : Form
     {
         ControllerMet met;
         Heroi heroi;
+        //CONSTRUTOR DO FORMHEROICON
         public FormHeroiCon()
         {
             InitializeComponent();
@@ -17,12 +17,13 @@ namespace TrabalhoHerois.View.FormHeroi
             heroi = new Heroi();
             met.atualizaLista(cbConIdHeroi, "herois", "idHeroi");
         }
-
-        private void btConsGeralAmigo_Click(object sender, EventArgs e)
+        //botão que faz a consulta de tudo dentro da tabela heroi
+        private void btConsGeralHeroi_Click(object sender, EventArgs e)
         {
-            met.consultaGeral(dgvHeroi, "herois");
+            met.consultaGeral(dgvHeroi, "Herois");
         }
-        private void btPerIDHeroi_Click(object sender, EventArgs e) 
+        //faz a consulta por um ID escolhido dentro do combobox
+        private void btPerIDHeroi_Click(object sender, EventArgs e)
         {
             Match match = Regex.Match(cbConIdHeroi.Text, @"(?<=\-)\-?\d+");
             heroi.IdPessoa = Convert.ToInt32(match.Value);

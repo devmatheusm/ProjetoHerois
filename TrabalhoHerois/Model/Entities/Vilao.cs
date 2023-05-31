@@ -1,17 +1,20 @@
 ﻿namespace TrabalhoHerois.Model.Entities
 {//criando as classes
     internal class Vilao : Pessoa
-    {//criando as variaveis
+    {
+        //VARIAVEIS DO VILÃO
         protected string nomeVilao;
         protected string planetaOrigem;
         protected string parceiro;
         protected string superPoder;
         protected string grupo;
         protected string pontoFraco;
+        // CONSTRUTOR DO VILÃO
         public Vilao() : base()
-        {// CONSTRUTOR
+        {
             nomeVilao = parceiro = superPoder = planetaOrigem = grupo = pontoFraco = "";
         }
+        //PROPRIEDADES DO VILÃO
         public string NomeVilao
         {
             get { return nomeVilao; }

@@ -1,31 +1,31 @@
 ﻿using System;
-using System.Windows.Forms;
-using TrabalhoHerois.Model.DAO;
-using TrabalhoHerois.Model.Entities;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 using TrabalhoHerois.Controller;
+using TrabalhoHerois.Model.Entities;
 
 namespace TrabalhoHerois.View.FormVilao
 {
     public partial class FormVilaoCon : Form
     {
-        VilaoDAO DAO;
+        //PROTOTIPO DOS OBJETOS
         ControllerMet met;
         Vilao vilao;
+        //CONSTRUTOR DO FORMVILAOCON
         public FormVilaoCon()
         {
             InitializeComponent();
-            DAO = new VilaoDAO();
             met = new ControllerMet();
             vilao = new Vilao();
             met.atualizaLista(cbConIdVilao, "viloes", "idVilao");
         }
-
+        //botão que faz a consulta de tudo dentro do vilao
         private void btConsGeralVilao_Click(object sender, EventArgs e)
         {
             met.consultaGeral(dgvVilaoCon, "viloes");
         }
-         private void btPerIDVilao_Click(object sender, EventArgs e)
+        //faz a consulta por um ID escolhido dentro do combobox
+        private void btPerIDVilao_Click(object sender, EventArgs e)
         {
             Match match = Regex.Match(cbConIdVilao.Text, @"(?<=\-)\-?\d+");
             vilao.IdPessoa = Convert.ToInt32(match.Value);

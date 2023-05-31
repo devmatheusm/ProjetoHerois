@@ -3,16 +3,16 @@ using System.Drawing;
 using System.Windows.Forms;
 using TrabalhoHerois.Model.DAO;
 using TrabalhoHerois.Model.Entities;
-using System.Web;
 
 namespace TrabalhoHerois.View.FormAmigo
 {
     public partial class FormAmigoCad : Form
     {
-        //Instancia a classe de metodos
+        //PROTOTIPO DOS OBJETOS
         Methods met;
         AmigoDAO dao;
         AmigoHeroi amigo;
+        //CONSTRUTOR DO FORMAMIGOCAD
         public FormAmigoCad()
         {
             InitializeComponent();
@@ -20,7 +20,6 @@ namespace TrabalhoHerois.View.FormAmigo
             amigo = new AmigoHeroi();
             met = new Methods();
         }
-
         //Ao clicar nesse Botão é pego todas as informações contidas dentro dos textbox
         //e registra no banco de dados
         #region cadastro de informação
@@ -128,9 +127,5 @@ namespace TrabalhoHerois.View.FormAmigo
             met.clearText(tbHobby);
         }
         #endregion
-
-        private void eg1f2c_Click(object sender, EventArgs e) {
-            MessageBox.Show("Parabéns por encontrar o secreto!", "PARABENS!!!");
-        }
     }
 }

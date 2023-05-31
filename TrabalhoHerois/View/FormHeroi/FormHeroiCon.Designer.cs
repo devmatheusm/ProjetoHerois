@@ -30,12 +30,12 @@
         {
             this.dgvHeroi = new System.Windows.Forms.DataGridView();
             this.btConsGeralHeroi = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnConsHeroi = new System.Windows.Forms.Panel();
             this.cbConIdHeroi = new System.Windows.Forms.ComboBox();
             this.btPerIDHeroi = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbConsHeroi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHeroi)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnConsHeroi.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvHeroi
@@ -62,21 +62,21 @@
             this.btConsGeralHeroi.TabIndex = 52;
             this.btConsGeralHeroi.Text = "CONSULTA GERAL";
             this.btConsGeralHeroi.UseVisualStyleBackColor = true;
-            this.btConsGeralHeroi.Click += new System.EventHandler(this.btConsGeralAmigo_Click);
+            this.btConsGeralHeroi.Click += new System.EventHandler(this.btConsGeralHeroi_Click);
             // 
-            // panel1
+            // pnConsHeroi
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pnConsHeroi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.cbConIdHeroi);
-            this.panel1.Controls.Add(this.btPerIDHeroi);
-            this.panel1.Controls.Add(this.btConsGeralHeroi);
-            this.panel1.Controls.Add(this.dgvHeroi);
-            this.panel1.Location = new System.Drawing.Point(12, 61);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(611, 321);
-            this.panel1.TabIndex = 57;
+            this.pnConsHeroi.Controls.Add(this.cbConIdHeroi);
+            this.pnConsHeroi.Controls.Add(this.btPerIDHeroi);
+            this.pnConsHeroi.Controls.Add(this.btConsGeralHeroi);
+            this.pnConsHeroi.Controls.Add(this.dgvHeroi);
+            this.pnConsHeroi.Location = new System.Drawing.Point(12, 61);
+            this.pnConsHeroi.Name = "pnConsHeroi";
+            this.pnConsHeroi.Size = new System.Drawing.Size(611, 321);
+            this.pnConsHeroi.TabIndex = 57;
             // 
             // cbConIdHeroi
             // 
@@ -97,18 +97,18 @@
             this.btPerIDHeroi.UseVisualStyleBackColor = true;
             this.btPerIDHeroi.Click += new System.EventHandler(this.btPerIDHeroi_Click);
             // 
-            // label1
+            // lbConsHeroi
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(227, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 29);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Consultar Heroi";
+            this.lbConsHeroi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbConsHeroi.AutoSize = true;
+            this.lbConsHeroi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbConsHeroi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbConsHeroi.Location = new System.Drawing.Point(227, 19);
+            this.lbConsHeroi.Margin = new System.Windows.Forms.Padding(10);
+            this.lbConsHeroi.Name = "lbConsHeroi";
+            this.lbConsHeroi.Size = new System.Drawing.Size(180, 29);
+            this.lbConsHeroi.TabIndex = 59;
+            this.lbConsHeroi.Text = "Consultar Heroi";
             // 
             // FormHeroiCon
             // 
@@ -116,13 +116,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
             this.ClientSize = new System.Drawing.Size(635, 400);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lbConsHeroi);
+            this.Controls.Add(this.pnConsHeroi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHeroiCon";
             this.Text = "FormHeroiCon";
             ((System.ComponentModel.ISupportInitialize)(this.dgvHeroi)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pnConsHeroi.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,9 +132,9 @@
 
         private System.Windows.Forms.DataGridView dgvHeroi;
         private System.Windows.Forms.Button btConsGeralHeroi;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnConsHeroi;
         private System.Windows.Forms.Button btPerIDHeroi;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbConsHeroi;
         private System.Windows.Forms.ComboBox cbConIdHeroi;
     }
 }

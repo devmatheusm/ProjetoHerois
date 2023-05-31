@@ -8,20 +8,23 @@ namespace TrabalhoHerois.View.FormHeroi
 {
     public partial class FormHeroiCad : Form
     {
-        //Instancia a classe de metodos
-        Methods met = new Methods();
+        //PROTOTIPO DOS OBJETOS
+        Methods met;
         HeroiDAO dao;
+        Heroi heroi;
+        //CONSTRUTOR DO FORMHEROICAD
         public FormHeroiCad()
         {
             InitializeComponent();
+            met = new Methods();
             dao = new HeroiDAO();
+            heroi = new Heroi();
         }
         //Ao clicar nesse Botão é pego todas as informações contidas dentro dos textbox
         //e registra no banco de dados
         #region cadastro de informação
         private void bt_enviar_Click(object sender, EventArgs e)
         {
-            Heroi heroi = new Heroi();
             bool concluido;
             try
             {
